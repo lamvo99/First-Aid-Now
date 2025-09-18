@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'dictionary_cubit.dart';
+part of 'learn_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,29 +15,29 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$DictionaryState {
+mixin _$LearnState {
   String? get errorMessage => throw _privateConstructorUsedError;
   ScreenValue? get status => throw _privateConstructorUsedError;
-  String get serachValue => throw _privateConstructorUsedError;
+  String get searchValue => throw _privateConstructorUsedError;
   BannerAd? get bannerAd => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? errorMessage, ScreenValue? status,
-            String serachValue, BannerAd? bannerAd)
+            String searchValue, BannerAd? bannerAd)
         initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? errorMessage, ScreenValue? status,
-            String serachValue, BannerAd? bannerAd)?
+            String searchValue, BannerAd? bannerAd)?
         initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? errorMessage, ScreenValue? status,
-            String serachValue, BannerAd? bannerAd)?
+            String searchValue, BannerAd? bannerAd)?
         initial,
     required TResult orElse(),
   }) =>
@@ -59,44 +59,44 @@ mixin _$DictionaryState {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of DictionaryState
+  /// Create a copy of LearnState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $DictionaryStateCopyWith<DictionaryState> get copyWith =>
+  $LearnStateCopyWith<LearnState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DictionaryStateCopyWith<$Res> {
-  factory $DictionaryStateCopyWith(
-          DictionaryState value, $Res Function(DictionaryState) then) =
-      _$DictionaryStateCopyWithImpl<$Res, DictionaryState>;
+abstract class $LearnStateCopyWith<$Res> {
+  factory $LearnStateCopyWith(
+          LearnState value, $Res Function(LearnState) then) =
+      _$LearnStateCopyWithImpl<$Res, LearnState>;
   @useResult
   $Res call(
       {String? errorMessage,
       ScreenValue? status,
-      String serachValue,
+      String searchValue,
       BannerAd? bannerAd});
 }
 
 /// @nodoc
-class _$DictionaryStateCopyWithImpl<$Res, $Val extends DictionaryState>
-    implements $DictionaryStateCopyWith<$Res> {
-  _$DictionaryStateCopyWithImpl(this._value, this._then);
+class _$LearnStateCopyWithImpl<$Res, $Val extends LearnState>
+    implements $LearnStateCopyWith<$Res> {
+  _$LearnStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DictionaryState
+  /// Create a copy of LearnState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? errorMessage = freezed,
     Object? status = freezed,
-    Object? serachValue = null,
+    Object? searchValue = null,
     Object? bannerAd = freezed,
   }) {
     return _then(_value.copyWith(
@@ -108,9 +108,9 @@ class _$DictionaryStateCopyWithImpl<$Res, $Val extends DictionaryState>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ScreenValue?,
-      serachValue: null == serachValue
-          ? _value.serachValue
-          : serachValue // ignore: cast_nullable_to_non_nullable
+      searchValue: null == searchValue
+          ? _value.searchValue
+          : searchValue // ignore: cast_nullable_to_non_nullable
               as String,
       bannerAd: freezed == bannerAd
           ? _value.bannerAd
@@ -122,7 +122,7 @@ class _$DictionaryStateCopyWithImpl<$Res, $Val extends DictionaryState>
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<$Res>
-    implements $DictionaryStateCopyWith<$Res> {
+    implements $LearnStateCopyWith<$Res> {
   factory _$$InitialImplCopyWith(
           _$InitialImpl value, $Res Function(_$InitialImpl) then) =
       __$$InitialImplCopyWithImpl<$Res>;
@@ -131,26 +131,26 @@ abstract class _$$InitialImplCopyWith<$Res>
   $Res call(
       {String? errorMessage,
       ScreenValue? status,
-      String serachValue,
+      String searchValue,
       BannerAd? bannerAd});
 }
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$DictionaryStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$LearnStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DictionaryState
+  /// Create a copy of LearnState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? errorMessage = freezed,
     Object? status = freezed,
-    Object? serachValue = null,
+    Object? searchValue = null,
     Object? bannerAd = freezed,
   }) {
     return _then(_$InitialImpl(
@@ -162,9 +162,9 @@ class __$$InitialImplCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ScreenValue?,
-      serachValue: null == serachValue
-          ? _value.serachValue
-          : serachValue // ignore: cast_nullable_to_non_nullable
+      searchValue: null == searchValue
+          ? _value.searchValue
+          : searchValue // ignore: cast_nullable_to_non_nullable
               as String,
       bannerAd: freezed == bannerAd
           ? _value.bannerAd
@@ -178,7 +178,7 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   const _$InitialImpl(
-      {this.errorMessage, this.status, this.serachValue = "", this.bannerAd});
+      {this.errorMessage, this.status, this.searchValue = "", this.bannerAd});
 
   @override
   final String? errorMessage;
@@ -186,23 +186,23 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   final ScreenValue? status;
   @override
   @JsonKey()
-  final String serachValue;
+  final String searchValue;
   @override
   final BannerAd? bannerAd;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'DictionaryState.initial(errorMessage: $errorMessage, status: $status, serachValue: $serachValue, bannerAd: $bannerAd)';
+    return 'LearnState.initial(errorMessage: $errorMessage, status: $status, searchValue: $searchValue, bannerAd: $bannerAd)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'DictionaryState.initial'))
+      ..add(DiagnosticsProperty('type', 'LearnState.initial'))
       ..add(DiagnosticsProperty('errorMessage', errorMessage))
       ..add(DiagnosticsProperty('status', status))
-      ..add(DiagnosticsProperty('serachValue', serachValue))
+      ..add(DiagnosticsProperty('searchValue', searchValue))
       ..add(DiagnosticsProperty('bannerAd', bannerAd));
   }
 
@@ -214,17 +214,17 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage) &&
             (identical(other.status, status) || other.status == status) &&
-            (identical(other.serachValue, serachValue) ||
-                other.serachValue == serachValue) &&
+            (identical(other.searchValue, searchValue) ||
+                other.searchValue == searchValue) &&
             (identical(other.bannerAd, bannerAd) ||
                 other.bannerAd == bannerAd));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, errorMessage, status, serachValue, bannerAd);
+      Object.hash(runtimeType, errorMessage, status, searchValue, bannerAd);
 
-  /// Create a copy of DictionaryState
+  /// Create a copy of LearnState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -236,32 +236,32 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? errorMessage, ScreenValue? status,
-            String serachValue, BannerAd? bannerAd)
+            String searchValue, BannerAd? bannerAd)
         initial,
   }) {
-    return initial(errorMessage, status, serachValue, bannerAd);
+    return initial(errorMessage, status, searchValue, bannerAd);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? errorMessage, ScreenValue? status,
-            String serachValue, BannerAd? bannerAd)?
+            String searchValue, BannerAd? bannerAd)?
         initial,
   }) {
-    return initial?.call(errorMessage, status, serachValue, bannerAd);
+    return initial?.call(errorMessage, status, searchValue, bannerAd);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? errorMessage, ScreenValue? status,
-            String serachValue, BannerAd? bannerAd)?
+            String searchValue, BannerAd? bannerAd)?
         initial,
     required TResult orElse(),
   }) {
     if (initial != null) {
-      return initial(errorMessage, status, serachValue, bannerAd);
+      return initial(errorMessage, status, searchValue, bannerAd);
     }
     return orElse();
   }
@@ -295,11 +295,11 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   }
 }
 
-abstract class _Initial implements DictionaryState {
+abstract class _Initial implements LearnState {
   const factory _Initial(
       {final String? errorMessage,
       final ScreenValue? status,
-      final String serachValue,
+      final String searchValue,
       final BannerAd? bannerAd}) = _$InitialImpl;
 
   @override
@@ -307,11 +307,11 @@ abstract class _Initial implements DictionaryState {
   @override
   ScreenValue? get status;
   @override
-  String get serachValue;
+  String get searchValue;
   @override
   BannerAd? get bannerAd;
 
-  /// Create a copy of DictionaryState
+  /// Create a copy of LearnState
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)

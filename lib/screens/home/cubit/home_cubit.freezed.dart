@@ -18,9 +18,6 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeState {
   String? get errorMessage => throw _privateConstructorUsedError;
   ScreenValue? get status => throw _privateConstructorUsedError;
-  DateTime get currentDate => throw _privateConstructorUsedError;
-  List<PersonalEvent> get listPersonalEvent =>
-      throw _privateConstructorUsedError;
   Locale? get locale => throw _privateConstructorUsedError;
   EmergencyNumber? get emergencyNumber => throw _privateConstructorUsedError;
   BannerAd? get bannerAd => throw _privateConstructorUsedError;
@@ -29,8 +26,6 @@ mixin _$HomeState {
     required TResult Function(
             String? errorMessage,
             ScreenValue? status,
-            DateTime currentDate,
-            List<PersonalEvent> listPersonalEvent,
             Locale? locale,
             EmergencyNumber? emergencyNumber,
             BannerAd? bannerAd)
@@ -39,27 +34,15 @@ mixin _$HomeState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String? errorMessage,
-            ScreenValue? status,
-            DateTime currentDate,
-            List<PersonalEvent> listPersonalEvent,
-            Locale? locale,
-            EmergencyNumber? emergencyNumber,
-            BannerAd? bannerAd)?
+    TResult? Function(String? errorMessage, ScreenValue? status, Locale? locale,
+            EmergencyNumber? emergencyNumber, BannerAd? bannerAd)?
         initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String? errorMessage,
-            ScreenValue? status,
-            DateTime currentDate,
-            List<PersonalEvent> listPersonalEvent,
-            Locale? locale,
-            EmergencyNumber? emergencyNumber,
-            BannerAd? bannerAd)?
+    TResult Function(String? errorMessage, ScreenValue? status, Locale? locale,
+            EmergencyNumber? emergencyNumber, BannerAd? bannerAd)?
         initial,
     required TResult orElse(),
   }) =>
@@ -96,8 +79,6 @@ abstract class $HomeStateCopyWith<$Res> {
   $Res call(
       {String? errorMessage,
       ScreenValue? status,
-      DateTime currentDate,
-      List<PersonalEvent> listPersonalEvent,
       Locale? locale,
       EmergencyNumber? emergencyNumber,
       BannerAd? bannerAd});
@@ -122,8 +103,6 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   $Res call({
     Object? errorMessage = freezed,
     Object? status = freezed,
-    Object? currentDate = null,
-    Object? listPersonalEvent = null,
     Object? locale = freezed,
     Object? emergencyNumber = freezed,
     Object? bannerAd = freezed,
@@ -137,14 +116,6 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ScreenValue?,
-      currentDate: null == currentDate
-          ? _value.currentDate
-          : currentDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      listPersonalEvent: null == listPersonalEvent
-          ? _value.listPersonalEvent
-          : listPersonalEvent // ignore: cast_nullable_to_non_nullable
-              as List<PersonalEvent>,
       locale: freezed == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
@@ -186,8 +157,6 @@ abstract class _$$InitialImplCopyWith<$Res>
   $Res call(
       {String? errorMessage,
       ScreenValue? status,
-      DateTime currentDate,
-      List<PersonalEvent> listPersonalEvent,
       Locale? locale,
       EmergencyNumber? emergencyNumber,
       BannerAd? bannerAd});
@@ -211,8 +180,6 @@ class __$$InitialImplCopyWithImpl<$Res>
   $Res call({
     Object? errorMessage = freezed,
     Object? status = freezed,
-    Object? currentDate = null,
-    Object? listPersonalEvent = null,
     Object? locale = freezed,
     Object? emergencyNumber = freezed,
     Object? bannerAd = freezed,
@@ -226,14 +193,6 @@ class __$$InitialImplCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ScreenValue?,
-      currentDate: null == currentDate
-          ? _value.currentDate
-          : currentDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      listPersonalEvent: null == listPersonalEvent
-          ? _value._listPersonalEvent
-          : listPersonalEvent // ignore: cast_nullable_to_non_nullable
-              as List<PersonalEvent>,
       locale: freezed == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
@@ -256,29 +215,14 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   const _$InitialImpl(
       {this.errorMessage,
       this.status,
-      required this.currentDate,
-      final List<PersonalEvent> listPersonalEvent = const [],
       this.locale,
       this.emergencyNumber,
-      this.bannerAd})
-      : _listPersonalEvent = listPersonalEvent;
+      this.bannerAd});
 
   @override
   final String? errorMessage;
   @override
   final ScreenValue? status;
-  @override
-  final DateTime currentDate;
-  final List<PersonalEvent> _listPersonalEvent;
-  @override
-  @JsonKey()
-  List<PersonalEvent> get listPersonalEvent {
-    if (_listPersonalEvent is EqualUnmodifiableListView)
-      return _listPersonalEvent;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_listPersonalEvent);
-  }
-
   @override
   final Locale? locale;
   @override
@@ -288,7 +232,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'HomeState.initial(errorMessage: $errorMessage, status: $status, currentDate: $currentDate, listPersonalEvent: $listPersonalEvent, locale: $locale, emergencyNumber: $emergencyNumber, bannerAd: $bannerAd)';
+    return 'HomeState.initial(errorMessage: $errorMessage, status: $status, locale: $locale, emergencyNumber: $emergencyNumber, bannerAd: $bannerAd)';
   }
 
   @override
@@ -298,8 +242,6 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
       ..add(DiagnosticsProperty('type', 'HomeState.initial'))
       ..add(DiagnosticsProperty('errorMessage', errorMessage))
       ..add(DiagnosticsProperty('status', status))
-      ..add(DiagnosticsProperty('currentDate', currentDate))
-      ..add(DiagnosticsProperty('listPersonalEvent', listPersonalEvent))
       ..add(DiagnosticsProperty('locale', locale))
       ..add(DiagnosticsProperty('emergencyNumber', emergencyNumber))
       ..add(DiagnosticsProperty('bannerAd', bannerAd));
@@ -313,10 +255,6 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage) &&
             (identical(other.status, status) || other.status == status) &&
-            (identical(other.currentDate, currentDate) ||
-                other.currentDate == currentDate) &&
-            const DeepCollectionEquality()
-                .equals(other._listPersonalEvent, _listPersonalEvent) &&
             (identical(other.locale, locale) || other.locale == locale) &&
             (identical(other.emergencyNumber, emergencyNumber) ||
                 other.emergencyNumber == emergencyNumber) &&
@@ -326,14 +264,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      errorMessage,
-      status,
-      currentDate,
-      const DeepCollectionEquality().hash(_listPersonalEvent),
-      locale,
-      emergencyNumber,
-      bannerAd);
+      runtimeType, errorMessage, status, locale, emergencyNumber, bannerAd);
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -349,51 +280,35 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function(
             String? errorMessage,
             ScreenValue? status,
-            DateTime currentDate,
-            List<PersonalEvent> listPersonalEvent,
             Locale? locale,
             EmergencyNumber? emergencyNumber,
             BannerAd? bannerAd)
         initial,
   }) {
-    return initial(errorMessage, status, currentDate, listPersonalEvent, locale,
-        emergencyNumber, bannerAd);
+    return initial(errorMessage, status, locale, emergencyNumber, bannerAd);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String? errorMessage,
-            ScreenValue? status,
-            DateTime currentDate,
-            List<PersonalEvent> listPersonalEvent,
-            Locale? locale,
-            EmergencyNumber? emergencyNumber,
-            BannerAd? bannerAd)?
+    TResult? Function(String? errorMessage, ScreenValue? status, Locale? locale,
+            EmergencyNumber? emergencyNumber, BannerAd? bannerAd)?
         initial,
   }) {
-    return initial?.call(errorMessage, status, currentDate, listPersonalEvent,
-        locale, emergencyNumber, bannerAd);
+    return initial?.call(
+        errorMessage, status, locale, emergencyNumber, bannerAd);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String? errorMessage,
-            ScreenValue? status,
-            DateTime currentDate,
-            List<PersonalEvent> listPersonalEvent,
-            Locale? locale,
-            EmergencyNumber? emergencyNumber,
-            BannerAd? bannerAd)?
+    TResult Function(String? errorMessage, ScreenValue? status, Locale? locale,
+            EmergencyNumber? emergencyNumber, BannerAd? bannerAd)?
         initial,
     required TResult orElse(),
   }) {
     if (initial != null) {
-      return initial(errorMessage, status, currentDate, listPersonalEvent,
-          locale, emergencyNumber, bannerAd);
+      return initial(errorMessage, status, locale, emergencyNumber, bannerAd);
     }
     return orElse();
   }
@@ -431,8 +346,6 @@ abstract class _Initial implements HomeState {
   const factory _Initial(
       {final String? errorMessage,
       final ScreenValue? status,
-      required final DateTime currentDate,
-      final List<PersonalEvent> listPersonalEvent,
       final Locale? locale,
       final EmergencyNumber? emergencyNumber,
       final BannerAd? bannerAd}) = _$InitialImpl;
@@ -441,10 +354,6 @@ abstract class _Initial implements HomeState {
   String? get errorMessage;
   @override
   ScreenValue? get status;
-  @override
-  DateTime get currentDate;
-  @override
-  List<PersonalEvent> get listPersonalEvent;
   @override
   Locale? get locale;
   @override

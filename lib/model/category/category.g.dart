@@ -13,7 +13,7 @@ _$CategoryImpl _$$CategoryImplFromJson(Map<String, dynamic> json) =>
       learnCategory:
           $enumDecodeNullable(_$LearnCategoryEnumMap, json['learnCategory']),
       shortDescription: json['shortDescription'] as String?,
-      url: json['url'] as String?,
+      logo_path: json['logo_path'] as String?,
     );
 
 Map<String, dynamic> _$$CategoryImplToJson(_$CategoryImpl instance) =>
@@ -22,13 +22,14 @@ Map<String, dynamic> _$$CategoryImplToJson(_$CategoryImpl instance) =>
       'name': instance.name,
       'learnCategory': _$LearnCategoryEnumMap[instance.learnCategory],
       'shortDescription': instance.shortDescription,
-      'url': instance.url,
+      'logo_path': instance.logo_path,
     };
 
 const _$LearnCategoryEnumMap = {
   LearnCategory.immediateLifeSupport: 'immediateLifeSupport',
-  LearnCategory.injuryManagement: 'injuryManagement',
-  LearnCategory.specificAccidents: 'specificAccidents',
-  LearnCategory.woundsInfections: 'woundsInfections',
+  LearnCategory.injuryBleedingManagement: 'injuryBleedingManagement',
+  LearnCategory.specificAccidentsWounds: 'specificAccidentsWounds',
   LearnCategory.survivalSkills: 'survivalSkills',
+  LearnCategory.generalPrinciplesPrevention: 'generalPrinciplesPrevention',
+  LearnCategory.medicalEmergencies: 'medicalEmergencies',
 };

@@ -46,6 +46,9 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 	late final TranslationsSeverityLevelVi SeverityLevel = TranslationsSeverityLevelVi.internal(_root);
 	late final TranslationsAgeGroupVi AgeGroup = TranslationsAgeGroupVi.internal(_root);
 	late final TranslationsEmergencyNumberVi EmergencyNumber = TranslationsEmergencyNumberVi.internal(_root);
+	late final TranslationsMainVi Main = TranslationsMainVi.internal(_root);
+	late final TranslationsLearnVi Learn = TranslationsLearnVi.internal(_root);
+	late final TranslationsToolVi Tool = TranslationsToolVi.internal(_root);
 	late final TranslationsMeritTypeVi MeritType = TranslationsMeritTypeVi.internal(_root);
 	late final TranslationsMeritJournalVi MeritJournal = TranslationsMeritJournalVi.internal(_root);
 	late final TranslationsEventTypeVi EventType = TranslationsEventTypeVi.internal(_root);
@@ -91,14 +94,16 @@ class TranslationsCategoryVi {
 	// Translations
 	String get Immediate => 'Sơ cứu';
 	String get ImmediateDesc => 'Đây là những kỹ năng cần thực hiện ngay lập tức để duy trì sự sống.';
-	String get Injury => 'Chấn thương';
-	String get InjuryDesc => 'Các kỹ thuật để kiểm soát và xử lý các chấn thương thể chất phổ biến.';
-	String get Special => 'Tình huống đặc biệt';
-	String get SpecialDesc => 'Xử trí các tình huống tai nạn cụ thể.';
-	String get WoundsAndInfections => 'Vết thương & Nhiễm trùng';
-	String get WoundsAndInfectionsDesc => 'Xử lý các vết thương có nguy cơ nhiễm trùng và các vết cắn, đốt.';
-	String get Survival => 'Kỹ năng sinh tồn';
-	String get SurvivalDesc => 'Các kỹ năng ứng phó khi lạc đường hoặc trong môi trường hoang dã.';
+	String get Injury => 'Chấn thương & Chảy máu';
+	String get InjuryDesc => 'Xử trí các chấn thương vật lý phổ biến, tập trung cầm máu và bất động.';
+	String get Special => 'Tai nạn & Vết thương đặc thù';
+	String get SpecialDesc => 'Tình huống tai nạn thường gặp trong đời sống hàng ngày.';
+	String get Survival => 'Kỹ năng Sinh tồn cơ bản';
+	String get SurvivalDesc => 'Khi bị lạc hoặc trong môi trường hoang dã, tập trung tự cứu.';
+	String get General => ' Nguyên tắc Chung & Phòng ngừa';
+	String get GeneralDesc => 'Kiến thức nền tảng giúp xử trí hiệu quả và an toàn.';
+	String get Emergencies => 'Kỹ năng Sinh tồn cơ bản';
+	String get EmergenciesDesc => 'Xử lý các vấn đề sức khỏe đột ngột, phổ biến ở người lớn tuổi hoặc có bệnh nền.';
 }
 
 // Path: MainTab
@@ -112,6 +117,7 @@ class TranslationsMainTabVi {
 	String get Learn => 'Học';
 	String get Quiz => 'Trắc nghiệm';
 	String get Settings => 'Cài đặt';
+	String get Tool => 'Công cụ';
 }
 
 // Path: SeverityLevel
@@ -159,6 +165,79 @@ class TranslationsEmergencyNumberVi {
 	String get Fire => 'Xe cứu hoả';
 	String get Number => 'Số điện thoại khẩn cấp';
 	String get List => 'DS số điện thoại khẩn cấp';
+}
+
+// Path: Main
+class TranslationsMainVi {
+	TranslationsMainVi.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get Emergency => 'Tình huống khẩn cấp';
+	String get LearnCategory => 'Học theo chủ đề';
+	String get Favorites => 'Yêu thích của bạn';
+	String get Tips => 'Mẹo nhanh';
+	String get ContinueLearn => 'Bài học gần đây';
+	String get NoLesson => 'Bạn chưa có bài học nào';
+	String get GoLearn => 'Đi đến học tập';
+}
+
+// Path: Learn
+class TranslationsLearnVi {
+	TranslationsLearnVi.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get Library => 'Thư viện Bài học';
+	String get Search => 'Tìm kiếm bài học';
+	String get Continue => 'Tiếp tục học';
+	String get Category => 'Danh mục';
+	String Lessons({required Object num}) => '${num} bài học';
+	String get Complete => 'hoàn thành';
+	String get Of => 'Thuộc';
+	String get ForYou => 'Dành cho bạn';
+}
+
+// Path: Tool
+class TranslationsToolVi {
+	TranslationsToolVi.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get Title => 'Bộ công cụ';
+	String get Quick => 'Công cụ khẩn cấp';
+	String get Flashlight => 'Đèn pin';
+	String get Sos => 'Còi SOS';
+	String get Card => 'Thẻ cứu thương';
+	String get FirstAidKit => 'Công cụ sơ cứu và y tế';
+	String get Cpr => 'CPR Metronome';
+	String get Timer => 'Tourniquet Timer';
+	String get Kit => 'Danh sách dụng cụ';
+	String get Survival => 'Công cụ định hướng và sinh tồn';
+	String get Compass => 'La bàn';
+	String get Ruler => 'Thước kẽ';
+	String get SoundMeter => 'Thước đo âm thanh';
+	String get Thermometer => 'Nhiệt kế';
+	String get Support => 'Công cụ Hỗ trợ & Ghi chép';
+	String get NotePad => 'Ghi chú Nhanh (Notepad)';
+	String get NoteVoice => 'Ghi chú Thoại (Voice Memo)';
+	String get Alarm => 'Báo thức/Bộ hẹn giờ';
+	String get Latitude => 'Kinh độ';
+	String get Longitude => 'Vĩ độ';
+	String get Elevation => 'Độ cao';
+	String get Atmospheric => 'áp suất khí quyển';
+	String get LocationRequired => 'Bạn cần có quyền truy cập vị trí để lấy được vị trí chính sác';
+	String get RequiredPermission => 'Cấp quyền';
+	String get OpenSetting => 'Mở cài đặt ứng dụng';
+	String get NoSensor => 'Thiết bị không có cảm biến !';
+	String get Start => 'Bất đầu';
+	String get Stop => 'Dừng';
+	String get Mean => 'Trung bình';
+	String get Max => 'Tối đa';
+	String get Current => 'Hiện tại';
 }
 
 // Path: MeritType
@@ -705,18 +784,21 @@ extension on Translations {
 			case 'Splash.Subtitle': return 'Ứng dụng hướng dẫn sơ cứu và kỹ năng sinh tồn toàn diện, dễ sử dụng cho mọi người.';
 			case 'Category.Immediate': return 'Sơ cứu';
 			case 'Category.ImmediateDesc': return 'Đây là những kỹ năng cần thực hiện ngay lập tức để duy trì sự sống.';
-			case 'Category.Injury': return 'Chấn thương';
-			case 'Category.InjuryDesc': return 'Các kỹ thuật để kiểm soát và xử lý các chấn thương thể chất phổ biến.';
-			case 'Category.Special': return 'Tình huống đặc biệt';
-			case 'Category.SpecialDesc': return 'Xử trí các tình huống tai nạn cụ thể.';
-			case 'Category.WoundsAndInfections': return 'Vết thương & Nhiễm trùng';
-			case 'Category.WoundsAndInfectionsDesc': return 'Xử lý các vết thương có nguy cơ nhiễm trùng và các vết cắn, đốt.';
-			case 'Category.Survival': return 'Kỹ năng sinh tồn';
-			case 'Category.SurvivalDesc': return 'Các kỹ năng ứng phó khi lạc đường hoặc trong môi trường hoang dã.';
+			case 'Category.Injury': return 'Chấn thương & Chảy máu';
+			case 'Category.InjuryDesc': return 'Xử trí các chấn thương vật lý phổ biến, tập trung cầm máu và bất động.';
+			case 'Category.Special': return 'Tai nạn & Vết thương đặc thù';
+			case 'Category.SpecialDesc': return 'Tình huống tai nạn thường gặp trong đời sống hàng ngày.';
+			case 'Category.Survival': return 'Kỹ năng Sinh tồn cơ bản';
+			case 'Category.SurvivalDesc': return 'Khi bị lạc hoặc trong môi trường hoang dã, tập trung tự cứu.';
+			case 'Category.General': return ' Nguyên tắc Chung & Phòng ngừa';
+			case 'Category.GeneralDesc': return 'Kiến thức nền tảng giúp xử trí hiệu quả và an toàn.';
+			case 'Category.Emergencies': return 'Kỹ năng Sinh tồn cơ bản';
+			case 'Category.EmergenciesDesc': return 'Xử lý các vấn đề sức khỏe đột ngột, phổ biến ở người lớn tuổi hoặc có bệnh nền.';
 			case 'MainTab.Home': return 'Trang chủ';
 			case 'MainTab.Learn': return 'Học';
 			case 'MainTab.Quiz': return 'Trắc nghiệm';
 			case 'MainTab.Settings': return 'Cài đặt';
+			case 'MainTab.Tool': return 'Công cụ';
 			case 'SeverityLevel.Emergency': return 'Nguy cấp';
 			case 'SeverityLevel.High': return 'Cao';
 			case 'SeverityLevel.Medium': return 'Trung';
@@ -737,6 +819,52 @@ extension on Translations {
 			case 'EmergencyNumber.Fire': return 'Xe cứu hoả';
 			case 'EmergencyNumber.Number': return 'Số điện thoại khẩn cấp';
 			case 'EmergencyNumber.List': return 'DS số điện thoại khẩn cấp';
+			case 'Main.Emergency': return 'Tình huống khẩn cấp';
+			case 'Main.LearnCategory': return 'Học theo chủ đề';
+			case 'Main.Favorites': return 'Yêu thích của bạn';
+			case 'Main.Tips': return 'Mẹo nhanh';
+			case 'Main.ContinueLearn': return 'Bài học gần đây';
+			case 'Main.NoLesson': return 'Bạn chưa có bài học nào';
+			case 'Main.GoLearn': return 'Đi đến học tập';
+			case 'Learn.Library': return 'Thư viện Bài học';
+			case 'Learn.Search': return 'Tìm kiếm bài học';
+			case 'Learn.Continue': return 'Tiếp tục học';
+			case 'Learn.Category': return 'Danh mục';
+			case 'Learn.Lessons': return ({required Object num}) => '${num} bài học';
+			case 'Learn.Complete': return 'hoàn thành';
+			case 'Learn.Of': return 'Thuộc';
+			case 'Learn.ForYou': return 'Dành cho bạn';
+			case 'Tool.Title': return 'Bộ công cụ';
+			case 'Tool.Quick': return 'Công cụ khẩn cấp';
+			case 'Tool.Flashlight': return 'Đèn pin';
+			case 'Tool.Sos': return 'Còi SOS';
+			case 'Tool.Card': return 'Thẻ cứu thương';
+			case 'Tool.FirstAidKit': return 'Công cụ sơ cứu và y tế';
+			case 'Tool.Cpr': return 'CPR Metronome';
+			case 'Tool.Timer': return 'Tourniquet Timer';
+			case 'Tool.Kit': return 'Danh sách dụng cụ';
+			case 'Tool.Survival': return 'Công cụ định hướng và sinh tồn';
+			case 'Tool.Compass': return 'La bàn';
+			case 'Tool.Ruler': return 'Thước kẽ';
+			case 'Tool.SoundMeter': return 'Thước đo âm thanh';
+			case 'Tool.Thermometer': return 'Nhiệt kế';
+			case 'Tool.Support': return 'Công cụ Hỗ trợ & Ghi chép';
+			case 'Tool.NotePad': return 'Ghi chú Nhanh (Notepad)';
+			case 'Tool.NoteVoice': return 'Ghi chú Thoại (Voice Memo)';
+			case 'Tool.Alarm': return 'Báo thức/Bộ hẹn giờ';
+			case 'Tool.Latitude': return 'Kinh độ';
+			case 'Tool.Longitude': return 'Vĩ độ';
+			case 'Tool.Elevation': return 'Độ cao';
+			case 'Tool.Atmospheric': return 'áp suất khí quyển';
+			case 'Tool.LocationRequired': return 'Bạn cần có quyền truy cập vị trí để lấy được vị trí chính sác';
+			case 'Tool.RequiredPermission': return 'Cấp quyền';
+			case 'Tool.OpenSetting': return 'Mở cài đặt ứng dụng';
+			case 'Tool.NoSensor': return 'Thiết bị không có cảm biến !';
+			case 'Tool.Start': return 'Bất đầu';
+			case 'Tool.Stop': return 'Dừng';
+			case 'Tool.Mean': return 'Trung bình';
+			case 'Tool.Max': return 'Tối đa';
+			case 'Tool.Current': return 'Hiện tại';
 			case 'MeritType.Other': return 'Khác';
 			case 'MeritType.Liberation': return 'Phóng sinh';
 			case 'MeritType.Giving': return 'Bố thí';

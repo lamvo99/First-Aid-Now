@@ -7,8 +7,11 @@
 import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/public_providers/export.dart';
-import 'package:first_aid/screens/home/components/calendar_widget.dart';
+import 'package:first_aid/screens/home/components/category_learn_widget.dart';
+import 'package:first_aid/screens/home/components/favourites_lesson_widget.dart';
+import 'package:first_aid/screens/home/components/tips_widget.dart';
 import 'package:first_aid/screens/home/cubit/home_cubit.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -23,6 +26,8 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../app_common_data/export.dart';
 import '../../shared_customization/export.dart';
 import '/screens/bloc_base_screen.dart';
+import 'components/emergency_lesson_widget.dart';
+import 'components/title_component_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -68,7 +73,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocBaseScreen<HomeCubit, HomeState>(
-      // createCubit: (context) => HomeCubit(),
       onShowSuccess: (_, state) => Future(() => null),
       onShowSuccessDone: (_, state) {
         context.read<AppNotificationCubit>().notifyInApp(InAppNotification(
@@ -96,35 +100,47 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: AppColors.PRIMARY_BASE,
             childMargin: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             children: [
-              if (state.emergencyNumber != null) ... [
+              if (state.emergencyNumber != null) ...[
                 SpeedDialChild(
-                  child: Assets.icons.icPoliceCar.svg(colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn), height: 22),
+                  child: Assets.icons.icPoliceCar.svg(
+                      colorFilter:
+                          ColorFilter.mode(AppColors.white, BlendMode.srcIn),
+                      height: 22),
                   shape: CircleBorder(),
                   backgroundColor: AppColors.PRIMARY_BASE,
                   label: i18n.EmergencyNumber.Police,
-                  labelStyle: AppTextStyle.textSecondary14W500.copyWith(fontSize: 18),
+                  labelStyle:
+                      AppTextStyle.textSecondary14W500.copyWith(fontSize: 18),
                   foregroundColor: AppColors.gray300,
                   onTap: () {
                     _makePhoneCall(state.emergencyNumber!.police ?? "");
                   },
                 ),
                 SpeedDialChild(
-                  child: Assets.icons.icAmbulanceCar.svg(colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn), height: 22),
+                  child: Assets.icons.icAmbulanceCar.svg(
+                      colorFilter:
+                          ColorFilter.mode(AppColors.white, BlendMode.srcIn),
+                      height: 22),
                   shape: CircleBorder(),
                   backgroundColor: AppColors.PRIMARY_BASE,
                   label: i18n.EmergencyNumber.Ambulance,
-                  labelStyle: AppTextStyle.textSecondary14W500.copyWith(fontSize: 18),
+                  labelStyle:
+                      AppTextStyle.textSecondary14W500.copyWith(fontSize: 18),
                   foregroundColor: AppColors.gray300,
                   onTap: () {
                     _makePhoneCall(state.emergencyNumber!.ambulance ?? "");
                   },
                 ),
                 SpeedDialChild(
-                  child: Assets.icons.icFireTruck.svg(colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn), height: 22),
+                  child: Assets.icons.icFireTruck.svg(
+                      colorFilter:
+                          ColorFilter.mode(AppColors.white, BlendMode.srcIn),
+                      height: 22),
                   shape: CircleBorder(),
                   backgroundColor: AppColors.PRIMARY_BASE,
                   label: i18n.EmergencyNumber.Fire,
-                  labelStyle: AppTextStyle.textSecondary14W500.copyWith(fontSize: 18),
+                  labelStyle:
+                      AppTextStyle.textSecondary14W500.copyWith(fontSize: 18),
                   foregroundColor: AppColors.gray300,
                   onTap: () {
                     _makePhoneCall(state.emergencyNumber!.fire ?? "");
@@ -132,11 +148,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
               SpeedDialChild(
-                child: Assets.icons.icNumerPhoneList.svg(colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn), height: 22),
+                child: Assets.icons.icNumerPhoneList.svg(
+                    colorFilter:
+                        ColorFilter.mode(AppColors.white, BlendMode.srcIn),
+                    height: 22),
                 shape: CircleBorder(),
                 backgroundColor: AppColors.PRIMARY_BASE,
                 label: i18n.EmergencyNumber.List,
-                labelStyle: AppTextStyle.textSecondary14W500.copyWith(fontSize: 18),
+                labelStyle:
+                    AppTextStyle.textSecondary14W500.copyWith(fontSize: 18),
                 foregroundColor: AppColors.gray300,
                 onTap: () {
                   _context.pushNamed(Routes.emergencyNumber);
@@ -160,7 +180,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: AdWidget(ad: state.bannerAd!),
                     ),
                   ),
-
                 Expanded(
                   child: AppContainer(
                     width: 1.sw,
@@ -170,50 +189,51 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
+                        spacing: 16,
                         children: [
                           ///
                           /// Search
                           ///
-                          AppTextField(
-                            onChanged: (value) {
-                            },
-                            placeholder: i18n.CommonAction.Search,
-                            suffixIcon: Assets.icons.icSearch.svg(),
-                          ),
-
-                          ///
-                          /// ACTION
-                          ///
-                          SizedBox(height: 16),
-                          GridView.count(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 12,
-                            mainAxisSpacing: 12,
-                            shrinkWrap: true,
-                            physics: NeverScrollableScrollPhysics(),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            spacing: 12,
                             children: [
-                              _buildActionWidget(
+                              InkWell(
                                 onTap: () {
-                                  context.pushNamed(Routes.prayerScree);
+                                  Scaffold.of(context).openDrawer();
                                 },
-                                title: i18n.Prayer.Title,
-                                image: Assets.images.prayer,
+                                child: Icon(CupertinoIcons.list_bullet),
                               ),
-                              _buildActionWidget(
-                                onTap: () {
-                                  context.pushNamed(Routes.woodenFish);
-                                },
-                                title: i18n.WoodenFish.Title,
-                                image: Assets.images.woodenFish,
+                              Expanded(
+                                child: AppTextField(
+                                  onChanged: (value) {},
+                                  placeholder: i18n.CommonAction.Search,
+                                  suffixIcon: Assets.icons.icSearch.svg(),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
                               ),
                             ],
                           ),
 
+                          EmergencyLessonWidget(state: state),
+
                           ///
-                          /// CALENDAR
+                          /// Emergency Learn
                           ///
-                          SizedBox(height: 16),
-                          CalendarWidget(state: state)
+                          CategoryLearnWidget(state: state),
+
+                          ///
+                          ///
+                          ///
+                          FavouritesLessonWidget(state: state),
+
+                          ///
+                          ///
+                          ///
+                          TipsWidget(state: state),
+
+                          ///
                         ],
                       ),
                     ),

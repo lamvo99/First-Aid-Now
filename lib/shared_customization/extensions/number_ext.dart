@@ -3,6 +3,7 @@ import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/shared_customization/export.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'dart:math' as math;
 
 // Package imports:
 
@@ -109,6 +110,39 @@ extension NumExt on num? {
       locale: 'vi_VN',
       symbol: 'đ',
     ).format(this!).replaceAll(RegExp(r'\s+'), '');
+  }
+
+  String decimalToDMS() {
+    if (this == null) return "";
+    // Lấy phần độ
+    int degrees = this!.truncate();
+
+    // Lấy phần phút
+    double decimalMinutes = (this! - degrees).abs() * 60;
+    int minutes = decimalMinutes.truncate();
+
+    // Lấy phần giây
+    double seconds = (decimalMinutes - minutes) * 60;
+    int sec = seconds.round();
+
+    // Xử lý trường hợp giây = 60 (quá tròn)
+    if (sec == 60) {
+      sec = 0;
+      minutes += 1;
+    }
+    if (minutes == 60) {
+      minutes = 0;
+      degrees += (this!.isNegative ? -1 : 1);
+    }
+
+    return "$degrees°${minutes}'${sec}\"";
+
+  }
+
+  num pressureToAltitude({double seaLevelPressure = 1013.25}) {
+    if (this == null) return 0;
+    num allti = 44330 * (this! - math.pow(this! / seaLevelPressure, 1 / 5.255));
+    return allti;
   }
 
   double roundToNearestHalf() {

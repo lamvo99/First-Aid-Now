@@ -1,9 +1,11 @@
 // Flutter imports:
 import 'package:first_aid/model/emergency_number/emergency_number.dart';
+import 'package:first_aid/screens/compass/compass_screen.dart';
 import 'package:first_aid/screens/emergency_number_list/emergency_number_screen.dart';
 import 'package:first_aid/screens/language_setting_screen/language_setting_screen.dart';
 import 'package:first_aid/screens/main_screen/main_screen.dart';
 import 'package:first_aid/screens/prayer/prayer_screen.dart';
+import 'package:first_aid/screens/sound_meter/sound_meter_screen.dart';
 import 'package:first_aid/screens/splash/splash_screen.dart';
 import 'package:first_aid/screens/wooden_fish/wooden_fish.dart';
 import 'package:first_aid/shared_customization/extensions/build_context_ext.dart';
@@ -19,6 +21,8 @@ class Routes {
   static String mainScreen = '/main-screen';
   static String changeLanguage = '/change-language';
   static String emergencyNumber = '/emergency-number';
+  static String compassScreen = '/compass-screen';
+  static String soundMeterScreen = '/sound-meter-screen';
 
   static String prayerScree = '/prayer-screen';
   static String dictionaryListScreen = '/dict-list-screen';
@@ -31,6 +35,8 @@ class Routes {
     mainScreen: (context) => const MainScreen(),
     changeLanguage: (context) => LanguageSettingScreen(),
     emergencyNumber: (context) => const EmergencyNumberScreen(),
+    compassScreen: (context) => const CompassScreen(),
+    soundMeterScreen: (context) => const SoundMeterScreen(),
 
 
     prayerScree: (context) => PrayerScreen(),

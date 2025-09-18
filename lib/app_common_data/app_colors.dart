@@ -123,11 +123,17 @@ class AppColors {
   static const Color blue950 = Color(0xFF1F235B);
 
   //////Purple
+  static const Color purple25 = Color(0xFFFCFAFF);
   static const Color purple50 = Color(0xFFF9F5FF);
-  static const Color purple400 = Color(0xFFB692F6);
   static const Color purple100 = Color(0xFFF4EBFF);
+  static const Color purple200 = Color(0xFFE9D7FE);
+  static const Color purple300 = Color(0xFFD6BBFB);
+  static const Color purple400 = Color(0xFFB692F6);
   static const Color purple500 = Color(0xFF9E77ED);
   static const Color purple600 = Color(0xFF7F56D9);
+  static const Color purple700 = Color(0xFF6941C6);
+  static const Color purple800 = Color(0xFF53389E);
+  static const Color purple900 = Color(0xFF42307D);
 
 
   /// Gradient ///
@@ -157,12 +163,12 @@ class AppColors {
   static List<BoxShadow> shadow2 = [
     const BoxShadow(
       color: Color.fromRGBO(16, 24, 40, 0.10),
-      offset: Offset(0, 1),
+      offset: Offset(5, 2),
       blurRadius: 3,
     ),
     const BoxShadow(
       color: Color.fromRGBO(16, 24, 40, 0.06),
-      offset: Offset(0, 1),
+      offset: Offset(5, 2),
       blurRadius: 2,
     ),
   ];

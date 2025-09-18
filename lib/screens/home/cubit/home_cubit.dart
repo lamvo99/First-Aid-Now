@@ -21,14 +21,14 @@ part 'home_state.dart';
 part 'home_cubit.freezed.dart';
 
 class HomeCubit extends Cubit<HomeState> with UpdateBlocBaseState<HomeState> {
-  HomeCubit() : super(HomeState.initial(currentDate: DateTime.now()));
+  HomeCubit() : super(HomeState.initial());
 
   AppConfig appConfig = AppConfig();
 
   void initData() async {
     emit(state.copyWith(status: ScreenValue.init()));
     await Future.wait([
-      getPersonalEvents(),
+      // getPersonalEvents(),
       getBannerAd(),
       getBaseCountryCode(),
     ]);
@@ -67,13 +67,13 @@ class HomeCubit extends Cubit<HomeState> with UpdateBlocBaseState<HomeState> {
     }
   }
 
-  Future<void> getPersonalEvents() async {
-    try {
-      List<PersonalEvent> personalEvents =
-          await appDatabase.getPersonalEvents();
-      emit(state.copyWith(listPersonalEvent: personalEvents));
-    } catch (e) {}
-  }
+  // Future<void> getPersonalEvents() async {
+  //   try {
+  //     List<PersonalEvent> personalEvents =
+  //         await appDatabase.getPersonalEvents();
+  //     emit(state.copyWith(listPersonalEvent: personalEvents));
+  //   } catch (e) {}
+  // }
 
   @override
   void resetErrorMessage() => emit(state.copyWith(errorMessage: null));

@@ -7,7 +7,10 @@
 import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/public_providers/export.dart';
-import 'package:first_aid/screens/dictionary/cubit/dictionary_cubit.dart';
+import 'package:first_aid/screens/learn/components/category_widget.dart';
+import 'package:first_aid/screens/learn/components/continue_widget.dart';
+import 'package:first_aid/screens/learn/components/lesson_for_you_widget.dart';
+import 'package:first_aid/screens/learn/cubit/learn_cubit.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -21,14 +24,14 @@ import '../../app_common_data/export.dart';
 import '../../shared_customization/export.dart';
 import '/screens/bloc_base_screen.dart';
 
-class DictionaryScreen extends StatefulWidget {
-  const DictionaryScreen({super.key});
+class LearnScreen extends StatefulWidget {
+  const LearnScreen({super.key});
 
   @override
-  State<DictionaryScreen> createState() => _DictionaryScreenState();
+  State<LearnScreen> createState() => _LearnScreenState();
 }
 
-class _DictionaryScreenState extends State<DictionaryScreen> {
+class _LearnScreenState extends State<LearnScreen> {
   late BuildContext _context;
 
 
@@ -43,14 +46,14 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
   @override
   void dispose() {
     if (kReleaseMode) {
-      _context.read<DictionaryCubit>().state.bannerAd?.dispose();
+      _context.read<LearnCubit>().state.bannerAd?.dispose();
     }
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return BlocBaseScreen<DictionaryCubit, DictionaryState>(
+    return BlocBaseScreen<LearnCubit, LearnState>(
       onShowSuccess: (_, state) => Future(() => null),
       onShowSuccessDone: (_, state) {
         context.read<AppNotificationCubit>().notifyInApp(InAppNotification(
@@ -73,6 +76,8 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
           color: AppColors.white,
           padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               if (state.bannerAd != null)
                 Align(
@@ -86,13 +91,31 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
               SizedBox(height: 8),
               AppTextField(
                 onChanged: (value) {
-                  _context.read<DictionaryCubit>().updateState(
-                      (state) => state.copyWith(serachValue: value));
+                  _context.read<LearnCubit>().updateState(
+                      (state) => state.copyWith(searchValue: value));
                 },
+                borderRadius: BorderRadius.circular(12),
                 placeholder: i18n.CommonAction.Search,
                 suffixIcon: Assets.icons.icSearch.svg(),
               ),
               SizedBox(height: 16.h),
+              
+              ///
+              /// CONTIUE
+              /// 
+              ContinueWidget(state: state),
+              SizedBox(height: 16.h),
+
+              ///
+              ///
+              ///
+              CategoryWidget(state: state),
+              SizedBox(height: 16.h),
+
+              ///
+              ///
+              ///
+              LessonForYouWidget(state: state),
             ],
           ),
         );

@@ -8,20 +8,23 @@
   "Category": {
     "Immediate": "Sơ cứu",
     "Immediate_Desc": "Đây là những kỹ năng cần thực hiện ngay lập tức để duy trì sự sống.",
-    "Injury": "Chấn thương",
-    "Injury_Desc": "Các kỹ thuật để kiểm soát và xử lý các chấn thương thể chất phổ biến.",
-    "Special": "Tình huống đặc biệt",
-    "Special_Desc": "Xử trí các tình huống tai nạn cụ thể.",
-    "WoundsAndInfections": "Vết thương & Nhiễm trùng",
-    "WoundsAndInfections_Desc": "Xử lý các vết thương có nguy cơ nhiễm trùng và các vết cắn, đốt.",
-    "Survival": "Kỹ năng sinh tồn",
-    "Survival_Desc": "Các kỹ năng ứng phó khi lạc đường hoặc trong môi trường hoang dã."
+    "Injury": "Chấn thương & Chảy máu",
+    "Injury_Desc": "Xử trí các chấn thương vật lý phổ biến, tập trung cầm máu và bất động.",
+    "Special": "Tai nạn & Vết thương đặc thù",
+    "Special_Desc": "Tình huống tai nạn thường gặp trong đời sống hàng ngày.",
+    "Survival": "Kỹ năng Sinh tồn cơ bản",
+    "Survival_Desc": "Khi bị lạc hoặc trong môi trường hoang dã, tập trung tự cứu.",
+    "General": " Nguyên tắc Chung & Phòng ngừa",
+    "General_Desc": "Kiến thức nền tảng giúp xử trí hiệu quả và an toàn.",
+    "Emergencies": "Kỹ năng Sinh tồn cơ bản",
+    "Emergencies_Desc": "Xử lý các vấn đề sức khỏe đột ngột, phổ biến ở người lớn tuổi hoặc có bệnh nền."
   },
   "MainTab": {
     "Home": "Trang chủ",
     "Learn": "Học",
     "Quiz": "Trắc nghiệm",
-    "Settings": "Cài đặt"
+    "Settings": "Cài đặt",
+    "Tool": "Công cụ"
   },
   "SeverityLevel": {
     "Emergency": "Nguy cấp",
@@ -49,6 +52,59 @@
     "Number": "Số điện thoại khẩn cấp",
     "List": "DS số điện thoại khẩn cấp"
   },
+  "Main": {
+    "Emergency": "Tình huống khẩn cấp",
+    "LearnCategory": "Học theo chủ đề",
+    "Favorites": "Yêu thích của bạn",
+    "Tips": "Mẹo nhanh",
+    "ContinueLearn": "Bài học gần đây",
+    "NoLesson": "Bạn chưa có bài học nào",
+    "GoLearn": "Đi đến học tập"
+  },
+  "Learn": {
+    "Library": "Thư viện Bài học",
+    "Search": "Tìm kiếm bài học",
+    "Continue": "Tiếp tục học",
+    "Category": "Danh mục",
+    "Lessons": "{num} bài học",
+    "Complete": "hoàn thành",
+    "Of": "Thuộc",
+    "ForYou": "Dành cho bạn"
+  },
+  "Tool": {
+    "Title": "Bộ công cụ",
+    "Quick": "Công cụ khẩn cấp",
+    "Flashlight": "Đèn pin",
+    "Sos": "Còi SOS",
+    "Card": "Thẻ cứu thương",
+    "FirstAidKit": "Công cụ sơ cứu và y tế",
+    "CPR": "CPR Metronome",
+    "Timer": "Tourniquet Timer",
+    "Kit": "Danh sách dụng cụ",
+    "Survival": "Công cụ định hướng và sinh tồn",
+    "Compass": "La bàn",
+    "Ruler": "Thước kẽ",
+    "SoundMeter": "Thước đo âm thanh",
+    "Thermometer": "Nhiệt kế",
+    "Support": "Công cụ Hỗ trợ & Ghi chép",
+    "NotePad": "Ghi chú Nhanh (Notepad)",
+    "NoteVoice": "Ghi chú Thoại (Voice Memo)",
+    "Alarm": "Báo thức/Bộ hẹn giờ",
+    "Latitude": "Kinh độ",
+    "Longitude": "Vĩ độ",
+    "Elevation": "Độ cao",
+    "Atmospheric": "áp suất khí quyển",
+    "LocationRequired": "Bạn cần có quyền truy cập vị trí để lấy được vị trí chính sác",
+    "RequiredPermission": "Cấp quyền",
+    "OpenSetting": "Mở cài đặt ứng dụng",
+    "NoSensor": "Thiết bị không có cảm biến !",
+    "Start": "Bất đầu",
+    "Stop": "Dừng",
+    "Mean": "Trung bình",
+    "Max": "Tối đa",
+    "Current": "Hiện tại"
+  },
+
 
   "MeritType": {
     "Other": "Khác",
