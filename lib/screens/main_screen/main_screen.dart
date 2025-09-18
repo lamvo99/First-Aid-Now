@@ -5,10 +5,12 @@
 // Flutter imports:
 
 import 'package:first_aid/public_providers/export.dart';
-import 'package:first_aid/screens/dictionary/cubit/dictionary_cubit.dart';
+import 'package:first_aid/screens/learn/cubit/learn_cubit.dart';
 import 'package:first_aid/screens/home/cubit/home_cubit.dart';
 import 'package:first_aid/screens/merit_journal/cubit/merit_journal_cubit.dart';
 import 'package:first_aid/screens/setting/cubit/setting_cubit.dart';
+import 'package:first_aid/screens/setting/setting_screen.dart';
+import 'package:first_aid/screens/tools/cubit/tools_cubit.dart';
 import 'package:flutter/material.dart';
 
 // Package imports:
@@ -45,7 +47,8 @@ class _MainScreenState extends State<MainScreen> {
             BlocProvider<HomeCubit>(create: (context) => HomeCubit()..initData()),
             BlocProvider<SettingCubit>(create: (context) => SettingCubit()),
             BlocProvider<MeritJournalCubit>(create: (context) => MeritJournalCubit()..initData()),
-            BlocProvider<DictionaryCubit>(create: (context) => DictionaryCubit()..initData()),
+            BlocProvider<LearnCubit>(create: (context) => LearnCubit()..initData()),
+            BlocProvider<ToolsCubit>(create: (context) => ToolsCubit()),
           ],
           listeners: [
             ///
@@ -64,6 +67,9 @@ class _MainScreenState extends State<MainScreen> {
             return AppDismissKeyboard(
               child: Scaffold(
                 resizeToAvoidBottomInset: false,
+                drawer: AppContainer(
+                  color: AppColors.warning600,
+                ),
                 body: Stack(
                   children: [
                     AppLayout(

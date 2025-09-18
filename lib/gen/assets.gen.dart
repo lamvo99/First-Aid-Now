@@ -174,25 +174,71 @@ class $AssetsFontsGen {
 class $AssetsI18nGen {
   const $AssetsI18nGen();
 
-  /// File path: assets/i18n/strings_vi.json
-  String get stringsVi => 'assets/i18n/strings_vi.json';
+  /// File path: assets/i18n/vi.json
+  String get vi => 'assets/i18n/vi.json';
 
   /// List of all assets
-  List<String> get values => [stringsVi];
+  List<String> get values => [vi];
 }
 
 class $AssetsIconGen {
   const $AssetsIconGen();
 
+  /// File path: assets/icon/ic_compass.png
+  AssetGenImage get icCompass =>
+      const AssetGenImage('assets/icon/ic_compass.png');
+
+  /// File path: assets/icon/ic_emergency.png
+  AssetGenImage get icEmergency =>
+      const AssetGenImage('assets/icon/ic_emergency.png');
+
+  /// File path: assets/icon/ic_general.png
+  AssetGenImage get icGeneral =>
+      const AssetGenImage('assets/icon/ic_general.png');
+
+  /// File path: assets/icon/ic_immediate.png
+  AssetGenImage get icImmediate =>
+      const AssetGenImage('assets/icon/ic_immediate.png');
+
+  /// File path: assets/icon/ic_injury.png
+  AssetGenImage get icInjury =>
+      const AssetGenImage('assets/icon/ic_injury.png');
+
+  /// File path: assets/icon/ic_pointer.png
+  AssetGenImage get icPointer =>
+      const AssetGenImage('assets/icon/ic_pointer.png');
+
+  /// File path: assets/icon/ic_specific.png
+  AssetGenImage get icSpecific =>
+      const AssetGenImage('assets/icon/ic_specific.png');
+
+  /// File path: assets/icon/ic_surival.png
+  AssetGenImage get icSurival =>
+      const AssetGenImage('assets/icon/ic_surival.png');
+
   /// File path: assets/icon/icon.png
   AssetGenImage get icon => const AssetGenImage('assets/icon/icon.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [icon];
+  List<AssetGenImage> get values => [
+    icCompass,
+    icEmergency,
+    icGeneral,
+    icImmediate,
+    icInjury,
+    icPointer,
+    icSpecific,
+    icSurival,
+    icon,
+  ];
 }
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
+
+  /// File path: assets/icons/18032191-simple-compass-rose.jpg
+  AssetGenImage get a18032191SimpleCompassRose =>
+      const AssetGenImage('assets/icons/18032191-simple-compass-rose.jpg');
 
   /// File path: assets/icons/ic_add_circle.svg
   SvgGenImage get icAddCircle =>
@@ -201,6 +247,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_add_round.svg
   SvgGenImage get icAddRound =>
       const SvgGenImage('assets/icons/ic_add_round.svg');
+
+  /// File path: assets/icons/ic_alarm.svg
+  SvgGenImage get icAlarm => const SvgGenImage('assets/icons/ic_alarm.svg');
 
   /// File path: assets/icons/ic_ambulance_car.svg
   SvgGenImage get icAmbulanceCar =>
@@ -236,6 +285,10 @@ class $AssetsIconsGen {
   SvgGenImage get icBookActive =>
       const SvgGenImage('assets/icons/ic_book_active.svg');
 
+  /// File path: assets/icons/ic_book_open.svg
+  SvgGenImage get icBookOpen =>
+      const SvgGenImage('assets/icons/ic_book_open.svg');
+
   /// File path: assets/icons/ic_buddha.svg
   SvgGenImage get icBuddha => const SvgGenImage('assets/icons/ic_buddha.svg');
 
@@ -243,8 +296,16 @@ class $AssetsIconsGen {
   SvgGenImage get icCalendar =>
       const SvgGenImage('assets/icons/ic_calendar.svg');
 
+  /// File path: assets/icons/ic_call_emergency.svg
+  SvgGenImage get icCallEmergency =>
+      const SvgGenImage('assets/icons/ic_call_emergency.svg');
+
   /// File path: assets/icons/ic_candle.svg
   SvgGenImage get icCandle => const SvgGenImage('assets/icons/ic_candle.svg');
+
+  /// File path: assets/icons/ic_card_info.svg
+  SvgGenImage get icCardInfo =>
+      const SvgGenImage('assets/icons/ic_card_info.svg');
 
   /// File path: assets/icons/ic_clock.svg
   SvgGenImage get icClock => const SvgGenImage('assets/icons/ic_clock.svg');
@@ -252,12 +313,18 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_close.svg
   SvgGenImage get icClose => const SvgGenImage('assets/icons/ic_close.svg');
 
+  /// File path: assets/icons/ic_compass.svg
+  SvgGenImage get icCompass => const SvgGenImage('assets/icons/ic_compass.svg');
+
   /// File path: assets/icons/ic_confirm_flag.svg
   SvgGenImage get icConfirmFlag =>
       const SvgGenImage('assets/icons/ic_confirm_flag.svg');
 
   /// File path: assets/icons/ic_copy.svg
   SvgGenImage get icCopy => const SvgGenImage('assets/icons/ic_copy.svg');
+
+  /// File path: assets/icons/ic_cpr.svg
+  SvgGenImage get icCpr => const SvgGenImage('assets/icons/ic_cpr.svg');
 
   /// File path: assets/icons/ic_custom.svg
   SvgGenImage get icCustom => const SvgGenImage('assets/icons/ic_custom.svg');
@@ -288,6 +355,14 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_fire_truck.svg
   SvgGenImage get icFireTruck =>
       const SvgGenImage('assets/icons/ic_fire_truck.svg');
+
+  /// File path: assets/icons/ic_first_aid_kit.svg
+  SvgGenImage get icFirstAidKit =>
+      const SvgGenImage('assets/icons/ic_first_aid_kit.svg');
+
+  /// File path: assets/icons/ic_flashlight.svg
+  SvgGenImage get icFlashlight =>
+      const SvgGenImage('assets/icons/ic_flashlight.svg');
 
   /// File path: assets/icons/ic_georgian.svg
   SvgGenImage get icGeorgian =>
@@ -328,12 +403,18 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_lunar.svg
   SvgGenImage get icLunar => const SvgGenImage('assets/icons/ic_lunar.svg');
 
+  /// File path: assets/icons/ic_magnet.svg
+  SvgGenImage get icMagnet => const SvgGenImage('assets/icons/ic_magnet.svg');
+
   /// File path: assets/icons/ic_meditation_type.svg
   SvgGenImage get icMeditationType =>
       const SvgGenImage('assets/icons/ic_meditation_type.svg');
 
   /// File path: assets/icons/ic_menu.svg
   SvgGenImage get icMenu => const SvgGenImage('assets/icons/ic_menu.svg');
+
+  /// File path: assets/icons/ic_meter.svg
+  SvgGenImage get icMeter => const SvgGenImage('assets/icons/ic_meter.svg');
 
   /// File path: assets/icons/ic_mindfulness.svg
   SvgGenImage get icMindfulness =>
@@ -344,6 +425,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/ic_no_data.svg
   SvgGenImage get icNoData => const SvgGenImage('assets/icons/ic_no_data.svg');
+
+  /// File path: assets/icons/ic_notepad.svg
+  SvgGenImage get icNotepad => const SvgGenImage('assets/icons/ic_notepad.svg');
 
   /// File path: assets/icons/ic_numer_phone_list.svg
   SvgGenImage get icNumerPhoneList =>
@@ -383,6 +467,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_search.svg
   SvgGenImage get icSearch => const SvgGenImage('assets/icons/ic_search.svg');
 
+  /// File path: assets/icons/ic_sensor.svg
+  SvgGenImage get icSensor => const SvgGenImage('assets/icons/ic_sensor.svg');
+
   /// File path: assets/icons/ic_setting.svg
   SvgGenImage get icSetting => const SvgGenImage('assets/icons/ic_setting.svg');
 
@@ -397,6 +484,12 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_share.svg
   SvgGenImage get icShare => const SvgGenImage('assets/icons/ic_share.svg');
 
+  /// File path: assets/icons/ic_signal.svg
+  SvgGenImage get icSignal => const SvgGenImage('assets/icons/ic_signal.svg');
+
+  /// File path: assets/icons/ic_siren.svg
+  SvgGenImage get icSiren => const SvgGenImage('assets/icons/ic_siren.svg');
+
   /// File path: assets/icons/ic_success_banner.svg
   SvgGenImage get icSuccessBanner =>
       const SvgGenImage('assets/icons/ic_success_banner.svg');
@@ -410,10 +503,29 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_temple.svg
   SvgGenImage get icTemple => const SvgGenImage('assets/icons/ic_temple.svg');
 
+  /// File path: assets/icons/ic_thermometer.svg
+  SvgGenImage get icThermometer =>
+      const SvgGenImage('assets/icons/ic_thermometer.svg');
+
+  /// File path: assets/icons/ic_timer.svg
+  SvgGenImage get icTimer => const SvgGenImage('assets/icons/ic_timer.svg');
+
+  /// File path: assets/icons/ic_tool.svg
+  SvgGenImage get icTool => const SvgGenImage('assets/icons/ic_tool.svg');
+
+  /// File path: assets/icons/ic_tool_active.svg
+  SvgGenImage get icToolActive =>
+      const SvgGenImage('assets/icons/ic_tool_active.svg');
+
+  /// File path: assets/icons/ic_voice.svg
+  SvgGenImage get icVoice => const SvgGenImage('assets/icons/ic_voice.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [
+  List<dynamic> get values => [
+    a18032191SimpleCompassRose,
     icAddCircle,
     icAddRound,
+    icAlarm,
     icAmbulanceCar,
     icArrowBottom,
     icArrowLeft,
@@ -423,13 +535,18 @@ class $AssetsIconsGen {
     icAvatar,
     icBook,
     icBookActive,
+    icBookOpen,
     icBuddha,
     icCalendar,
+    icCallEmergency,
     icCandle,
+    icCardInfo,
     icClock,
     icClose,
+    icCompass,
     icConfirmFlag,
     icCopy,
+    icCpr,
     icCustom,
     icDove,
     icDownload,
@@ -439,6 +556,8 @@ class $AssetsIconsGen {
     icEyeOff,
     icFile,
     icFireTruck,
+    icFirstAidKit,
+    icFlashlight,
     icGeorgian,
     icGift,
     icHandHeart,
@@ -450,11 +569,14 @@ class $AssetsIconsGen {
     icLocation,
     icLotus,
     icLunar,
+    icMagnet,
     icMeditationType,
     icMenu,
+    icMeter,
     icMindfulness,
     icMoon,
     icNoData,
+    icNotepad,
     icNumerPhoneList,
     icOilLamp,
     icPause,
@@ -466,14 +588,22 @@ class $AssetsIconsGen {
     icRain,
     icScroll,
     icSearch,
+    icSensor,
     icSetting,
     icSettingActive,
     icSettingTotal,
     icShare,
+    icSignal,
+    icSiren,
     icSuccessBanner,
     icSyringe,
     icTeacher,
     icTemple,
+    icThermometer,
+    icTimer,
+    icTool,
+    icToolActive,
+    icVoice,
   ];
 }
 

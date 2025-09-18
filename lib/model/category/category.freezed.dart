@@ -24,7 +24,7 @@ mixin _$Category {
   String? get name => throw _privateConstructorUsedError;
   LearnCategory? get learnCategory => throw _privateConstructorUsedError;
   String? get shortDescription => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
+  String? get logo_path => throw _privateConstructorUsedError;
 
   /// Serializes this Category to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -46,7 +46,7 @@ abstract class $CategoryCopyWith<$Res> {
       String? name,
       LearnCategory? learnCategory,
       String? shortDescription,
-      String? url});
+      String? logo_path});
 }
 
 /// @nodoc
@@ -68,7 +68,7 @@ class _$CategoryCopyWithImpl<$Res, $Val extends Category>
     Object? name = freezed,
     Object? learnCategory = freezed,
     Object? shortDescription = freezed,
-    Object? url = freezed,
+    Object? logo_path = freezed,
   }) {
     return _then(_value.copyWith(
       numLesson: freezed == numLesson
@@ -87,9 +87,9 @@ class _$CategoryCopyWithImpl<$Res, $Val extends Category>
           ? _value.shortDescription
           : shortDescription // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
+      logo_path: freezed == logo_path
+          ? _value.logo_path
+          : logo_path // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -108,7 +108,7 @@ abstract class _$$CategoryImplCopyWith<$Res>
       String? name,
       LearnCategory? learnCategory,
       String? shortDescription,
-      String? url});
+      String? logo_path});
 }
 
 /// @nodoc
@@ -128,7 +128,7 @@ class __$$CategoryImplCopyWithImpl<$Res>
     Object? name = freezed,
     Object? learnCategory = freezed,
     Object? shortDescription = freezed,
-    Object? url = freezed,
+    Object? logo_path = freezed,
   }) {
     return _then(_$CategoryImpl(
       numLesson: freezed == numLesson
@@ -147,9 +147,9 @@ class __$$CategoryImplCopyWithImpl<$Res>
           ? _value.shortDescription
           : shortDescription // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
+      logo_path: freezed == logo_path
+          ? _value.logo_path
+          : logo_path // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -163,7 +163,7 @@ class _$CategoryImpl implements _Category {
       this.name,
       this.learnCategory,
       this.shortDescription,
-      this.url});
+      this.logo_path});
 
   factory _$CategoryImpl.fromJson(Map<String, dynamic> json) =>
       _$$CategoryImplFromJson(json);
@@ -177,11 +177,11 @@ class _$CategoryImpl implements _Category {
   @override
   final String? shortDescription;
   @override
-  final String? url;
+  final String? logo_path;
 
   @override
   String toString() {
-    return 'Category(numLesson: $numLesson, name: $name, learnCategory: $learnCategory, shortDescription: $shortDescription, url: $url)';
+    return 'Category(numLesson: $numLesson, name: $name, learnCategory: $learnCategory, shortDescription: $shortDescription, logo_path: $logo_path)';
   }
 
   @override
@@ -196,13 +196,14 @@ class _$CategoryImpl implements _Category {
                 other.learnCategory == learnCategory) &&
             (identical(other.shortDescription, shortDescription) ||
                 other.shortDescription == shortDescription) &&
-            (identical(other.url, url) || other.url == url));
+            (identical(other.logo_path, logo_path) ||
+                other.logo_path == logo_path));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, numLesson, name, learnCategory, shortDescription, url);
+      runtimeType, numLesson, name, learnCategory, shortDescription, logo_path);
 
   /// Create a copy of Category
   /// with the given fields replaced by the non-null parameter values.
@@ -226,7 +227,7 @@ abstract class _Category implements Category {
       final String? name,
       final LearnCategory? learnCategory,
       final String? shortDescription,
-      final String? url}) = _$CategoryImpl;
+      final String? logo_path}) = _$CategoryImpl;
 
   factory _Category.fromJson(Map<String, dynamic> json) =
       _$CategoryImpl.fromJson;
@@ -240,7 +241,7 @@ abstract class _Category implements Category {
   @override
   String? get shortDescription;
   @override
-  String? get url;
+  String? get logo_path;
 
   /// Create a copy of Category
   /// with the given fields replaced by the non-null parameter values.

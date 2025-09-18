@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'emergency_number_cubit.dart';
+part of 'tools_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,27 +15,23 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$EmergencyNumberState {
-  String get search => throw _privateConstructorUsedError;
+mixin _$ToolsState {
   String? get errorMessage => throw _privateConstructorUsedError;
   ScreenValue? get status => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String search, String? errorMessage, ScreenValue? status)
+    required TResult Function(String? errorMessage, ScreenValue? status)
         initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String search, String? errorMessage, ScreenValue? status)?
-        initial,
+    TResult? Function(String? errorMessage, ScreenValue? status)? initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String search, String? errorMessage, ScreenValue? status)?
-        initial,
+    TResult Function(String? errorMessage, ScreenValue? status)? initial,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -56,47 +52,41 @@ mixin _$EmergencyNumberState {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of EmergencyNumberState
+  /// Create a copy of ToolsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $EmergencyNumberStateCopyWith<EmergencyNumberState> get copyWith =>
+  $ToolsStateCopyWith<ToolsState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EmergencyNumberStateCopyWith<$Res> {
-  factory $EmergencyNumberStateCopyWith(EmergencyNumberState value,
-          $Res Function(EmergencyNumberState) then) =
-      _$EmergencyNumberStateCopyWithImpl<$Res, EmergencyNumberState>;
+abstract class $ToolsStateCopyWith<$Res> {
+  factory $ToolsStateCopyWith(
+          ToolsState value, $Res Function(ToolsState) then) =
+      _$ToolsStateCopyWithImpl<$Res, ToolsState>;
   @useResult
-  $Res call({String search, String? errorMessage, ScreenValue? status});
+  $Res call({String? errorMessage, ScreenValue? status});
 }
 
 /// @nodoc
-class _$EmergencyNumberStateCopyWithImpl<$Res,
-        $Val extends EmergencyNumberState>
-    implements $EmergencyNumberStateCopyWith<$Res> {
-  _$EmergencyNumberStateCopyWithImpl(this._value, this._then);
+class _$ToolsStateCopyWithImpl<$Res, $Val extends ToolsState>
+    implements $ToolsStateCopyWith<$Res> {
+  _$ToolsStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of EmergencyNumberState
+  /// Create a copy of ToolsState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? search = null,
     Object? errorMessage = freezed,
     Object? status = freezed,
   }) {
     return _then(_value.copyWith(
-      search: null == search
-          ? _value.search
-          : search // ignore: cast_nullable_to_non_nullable
-              as String,
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -111,37 +101,32 @@ class _$EmergencyNumberStateCopyWithImpl<$Res,
 
 /// @nodoc
 abstract class _$$InitialImplCopyWith<$Res>
-    implements $EmergencyNumberStateCopyWith<$Res> {
+    implements $ToolsStateCopyWith<$Res> {
   factory _$$InitialImplCopyWith(
           _$InitialImpl value, $Res Function(_$InitialImpl) then) =
       __$$InitialImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String search, String? errorMessage, ScreenValue? status});
+  $Res call({String? errorMessage, ScreenValue? status});
 }
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$EmergencyNumberStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$ToolsStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of EmergencyNumberState
+  /// Create a copy of ToolsState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? search = null,
     Object? errorMessage = freezed,
     Object? status = freezed,
   }) {
     return _then(_$InitialImpl(
-      search: null == search
-          ? _value.search
-          : search // ignore: cast_nullable_to_non_nullable
-              as String,
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -157,11 +142,8 @@ class __$$InitialImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
-  const _$InitialImpl({this.search = "", this.errorMessage, this.status});
+  const _$InitialImpl({this.errorMessage, this.status});
 
-  @override
-  @JsonKey()
-  final String search;
   @override
   final String? errorMessage;
   @override
@@ -169,15 +151,14 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'EmergencyNumberState.initial(search: $search, errorMessage: $errorMessage, status: $status)';
+    return 'ToolsState.initial(errorMessage: $errorMessage, status: $status)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'EmergencyNumberState.initial'))
-      ..add(DiagnosticsProperty('search', search))
+      ..add(DiagnosticsProperty('type', 'ToolsState.initial'))
       ..add(DiagnosticsProperty('errorMessage', errorMessage))
       ..add(DiagnosticsProperty('status', status));
   }
@@ -187,16 +168,15 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InitialImpl &&
-            (identical(other.search, search) || other.search == search) &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage) &&
             (identical(other.status, status) || other.status == status));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, search, errorMessage, status);
+  int get hashCode => Object.hash(runtimeType, errorMessage, status);
 
-  /// Create a copy of EmergencyNumberState
+  /// Create a copy of ToolsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
@@ -207,31 +187,28 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String search, String? errorMessage, ScreenValue? status)
+    required TResult Function(String? errorMessage, ScreenValue? status)
         initial,
   }) {
-    return initial(search, errorMessage, status);
+    return initial(errorMessage, status);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String search, String? errorMessage, ScreenValue? status)?
-        initial,
+    TResult? Function(String? errorMessage, ScreenValue? status)? initial,
   }) {
-    return initial?.call(search, errorMessage, status);
+    return initial?.call(errorMessage, status);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String search, String? errorMessage, ScreenValue? status)?
-        initial,
+    TResult Function(String? errorMessage, ScreenValue? status)? initial,
     required TResult orElse(),
   }) {
     if (initial != null) {
-      return initial(search, errorMessage, status);
+      return initial(errorMessage, status);
     }
     return orElse();
   }
@@ -265,20 +242,16 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   }
 }
 
-abstract class _Initial implements EmergencyNumberState {
+abstract class _Initial implements ToolsState {
   const factory _Initial(
-      {final String search,
-      final String? errorMessage,
-      final ScreenValue? status}) = _$InitialImpl;
+      {final String? errorMessage, final ScreenValue? status}) = _$InitialImpl;
 
-  @override
-  String get search;
   @override
   String? get errorMessage;
   @override
   ScreenValue? get status;
 
-  /// Create a copy of EmergencyNumberState
+  /// Create a copy of ToolsState
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)

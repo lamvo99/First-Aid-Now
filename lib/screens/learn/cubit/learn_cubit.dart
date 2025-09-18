@@ -11,13 +11,13 @@ import '../../../shared_customization/export.dart';
 import '/public_providers/config/bloc_base_state.dart';
 import '/public_providers/config/update_bloc_base_state.dart';
 
-part 'dictionary_state.dart';
+part 'learn_state.dart';
 
-part 'dictionary_cubit.freezed.dart';
+part 'learn_cubit.freezed.dart';
 
-class DictionaryCubit extends Cubit<DictionaryState>
-    with UpdateBlocBaseState<DictionaryState> {
-  DictionaryCubit() : super(const DictionaryState.initial());
+class LearnCubit extends Cubit<LearnState>
+    with UpdateBlocBaseState<LearnState> {
+  LearnCubit() : super(const LearnState.initial());
 
   final AppConfig _appConfig = AppConfig();
 

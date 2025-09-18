@@ -15,7 +15,7 @@ class Category with _$Category {
     String? name,
     LearnCategory? learnCategory,
     String? shortDescription,
-    String? url,
+    String? logo_path,
   }) = _Category;
 
   static Category get empty => const Category();
