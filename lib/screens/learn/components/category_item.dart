@@ -1,6 +1,6 @@
 import 'package:first_aid/app_common_data/app_colors.dart';
 import 'package:first_aid/app_common_data/app_text_sytle.dart';
-import 'package:first_aid/app_common_data/enum_new/learn_category.dart';
+import 'package:first_aid/app_common_data/export.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/model/export.dart';
 import 'package:first_aid/shared_customization/export.dart';

@@ -4,7 +4,7 @@
 import 'package:first_aid/app_common_data/app_colors.dart';
 import 'package:first_aid/app_common_data/app_text_sytle.dart';
 import 'package:first_aid/app_common_data/database/local_storage/database.dart';
-import 'package:first_aid/app_common_data/database/object_box_merit/merit_box_helper.dart';
+import 'package:first_aid/app_common_data/database/supply_object_box/supply_box_helper.dart';
 import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/app_common_data/database/storages.dart';
@@ -70,7 +70,7 @@ final Widget NO_INTERNET = Center(
 ///
 CustomSharedPreferences sp = CustomSharedPreferences();
 AppDatabase appDatabase = AppDatabase();
-MeritBoxHelper meritBoxHelper = MeritBoxHelper();
+SupplyBoxHelper meritBoxHelper = SupplyBoxHelper();
 NotificationHelper notificationHelper = NotificationHelper();
 // 'month': 'Month',
 // 'year': 'Year',

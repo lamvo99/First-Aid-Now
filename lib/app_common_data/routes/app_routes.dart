@@ -7,6 +7,7 @@ import 'package:first_aid/screens/main_screen/main_screen.dart';
 import 'package:first_aid/screens/prayer/prayer_screen.dart';
 import 'package:first_aid/screens/sound_meter/sound_meter_screen.dart';
 import 'package:first_aid/screens/splash/splash_screen.dart';
+import 'package:first_aid/screens/supply_screen/supply_screen.dart';
 import 'package:first_aid/screens/wooden_fish/wooden_fish.dart';
 import 'package:first_aid/shared_customization/extensions/build_context_ext.dart';
 import 'package:first_aid/shared_customization/widgets/custom_widgets/screens/app_image_full_screen.dart';
@@ -23,6 +24,7 @@ class Routes {
   static String emergencyNumber = '/emergency-number';
   static String compassScreen = '/compass-screen';
   static String soundMeterScreen = '/sound-meter-screen';
+  static String supplyScreen = '/supply-screen';
 
   static String prayerScree = '/prayer-screen';
   static String dictionaryListScreen = '/dict-list-screen';
@@ -37,6 +39,7 @@ class Routes {
     emergencyNumber: (context) => const EmergencyNumberScreen(),
     compassScreen: (context) => const CompassScreen(),
     soundMeterScreen: (context) => const SoundMeterScreen(),
+    supplyScreen: (context) => const SupplyScreen(),
 
 
     prayerScree: (context) => PrayerScreen(),

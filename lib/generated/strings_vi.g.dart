@@ -49,6 +49,8 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 	late final TranslationsMainVi Main = TranslationsMainVi.internal(_root);
 	late final TranslationsLearnVi Learn = TranslationsLearnVi.internal(_root);
 	late final TranslationsToolVi Tool = TranslationsToolVi.internal(_root);
+	late final TranslationsSuppliesVi Supplies = TranslationsSuppliesVi.internal(_root);
+	late final TranslationsEmergencyInfoVi EmergencyInfo = TranslationsEmergencyInfoVi.internal(_root);
 	late final TranslationsMeritTypeVi MeritType = TranslationsMeritTypeVi.internal(_root);
 	late final TranslationsMeritJournalVi MeritJournal = TranslationsMeritJournalVi.internal(_root);
 	late final TranslationsEventTypeVi EventType = TranslationsEventTypeVi.internal(_root);
@@ -238,6 +240,91 @@ class TranslationsToolVi {
 	String get Mean => 'Trung bình';
 	String get Max => 'Tối đa';
 	String get Current => 'Hiện tại';
+}
+
+// Path: Supplies
+class TranslationsSuppliesVi {
+	TranslationsSuppliesVi.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get List => 'Danh sách vật tư';
+	String get Title => 'Bộ sơ cứu';
+	String get Add => 'Thêm vật tư';
+	String get AddSuccess => 'Thêm vật tư thành công';
+	String get EditSuccess => 'Cập nhật thông tin vật tư thành công';
+	String get DeleteConfirm => 'Xác nhận xoá thông tin vật dụng';
+	String get DeleteSuccess => 'Xoá thông tin vật tư thành công';
+	String get Sort => 'Sắp xếp';
+	String get Search => 'Tìm vật tư';
+	String get Essential => 'Thiết yếu';
+	String get Dressing => 'Băng bó';
+	String get Medication => 'Thuốc men';
+	String get Tools => 'Dụng cụ';
+	String get Custom => 'Tuỳ chỉnh';
+	String get FastCheck => 'Kiểm tra nhanh';
+	String get Name => 'Tên vật tư';
+	String get NamePlace => 'Nhập tên vật tư';
+	String get Category => 'Danh mục';
+	String get Quantity => 'Số lượng';
+	String get QuantityNum => 'Nhập số lượng';
+	String get DateAdd => 'Ngày thêm';
+	String get DateExpired => 'Ngày hết hạn';
+	String get Note => 'Ghi chú';
+	String get NotePlaceholder => 'Nhập ghi chú';
+	String get Important => 'Vật tư quan trọng';
+	String get Default => 'Mặc định';
+	String get SortName => 'A-Z';
+	String get SortCategory => 'Danh mục';
+	String get SortChecked => 'Thiếu trước';
+	String get SortExpired => 'Sắp hết hạn';
+	String get SortImportant => 'Quan trọng';
+	String get Check => 'Kiêm tra danh sách';
+	String get CheckConfirm => 'Xác nhận kiểm tra danh sách vật tư';
+	String get CheckSuccess => 'Kiểm tra danh sách vật tư thành công';
+	String get QuantityNumError => 'Số lượng vật tư phải lớn hơn 0';
+	String get Edit => 'Chỉnh sửa vật tư';
+	String get Delete => 'Xoá vật tư';
+	String get Contain => 'Đã có';
+	String get LastChecked => 'Lần kiểm tra cuối';
+	String get UpdateAt => 'Cập nhật lúc';
+	String get Detail => 'Chi tiết vật tư';
+}
+
+// Path: EmergencyInfo
+class TranslationsEmergencyInfoVi {
+	TranslationsEmergencyInfoVi.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get Title => 'Thông tin khẩn cấp';
+	String get Edit => 'Chỉnh sửa thông tin';
+	String get Name => 'Họ và tên';
+	String get NamePlace => 'Nhập họ và tên';
+	String get DateOfBirth => 'Ngày sinh';
+	String get DateOfBirthPlace => 'Chọn ngày sinh';
+	String get Gender => 'Giới tính';
+	String get MedicalInfo => 'Thông tin y tế';
+	String get BloodType => 'Nhóm máu';
+	String get BloodTypePlace => 'Chọn nhóm máu';
+	String get Allergy => 'Dị ứng';
+	String get AllergyPlace => 'Nhập dị ứng (nếu có)';
+	String get UnderlyingDiseases => 'Bệnh nền';
+	String get UnderlyingDiseasesPlace => 'Nhập tiền sử bệnh (nếu có)';
+	String get Medication => 'Thuốc đang dùng';
+	String get MedicationPlace => 'Nhập thuốc đang dùng (nếu có)';
+	String get MedicalCondition => 'Tình trạng sức khoẻ';
+	String get MedicalConditionPlace => 'Nhập tình trạng sức khoẻ (nếu có)';
+	String get OrganDonation => 'Hiến tạng';
+	String get EmergencyContact => 'Người liên hệ khẩn cấp';
+	String get EmergencyContactPlace => 'Nhập người liên hệ khẩn cấp';
+	String get EmergencyPhone => 'Số điện thoại liên hệ khẩn cấp';
+	String get EmergencyPhonePlace => 'Nhập số điện thoại liên hệ khẩn cấp';
+	String get SaveSuccess => 'Lưu thông tin khẩn cấp thành công';
+	String get NoteSpecific => 'Ghi chú đặc biệt';
+	String get Setting => 'Cài đặt hiển thị';
 }
 
 // Path: MeritType
@@ -865,6 +952,73 @@ extension on Translations {
 			case 'Tool.Mean': return 'Trung bình';
 			case 'Tool.Max': return 'Tối đa';
 			case 'Tool.Current': return 'Hiện tại';
+			case 'Supplies.List': return 'Danh sách vật tư';
+			case 'Supplies.Title': return 'Bộ sơ cứu';
+			case 'Supplies.Add': return 'Thêm vật tư';
+			case 'Supplies.AddSuccess': return 'Thêm vật tư thành công';
+			case 'Supplies.EditSuccess': return 'Cập nhật thông tin vật tư thành công';
+			case 'Supplies.DeleteConfirm': return 'Xác nhận xoá thông tin vật dụng';
+			case 'Supplies.DeleteSuccess': return 'Xoá thông tin vật tư thành công';
+			case 'Supplies.Sort': return 'Sắp xếp';
+			case 'Supplies.Search': return 'Tìm vật tư';
+			case 'Supplies.Essential': return 'Thiết yếu';
+			case 'Supplies.Dressing': return 'Băng bó';
+			case 'Supplies.Medication': return 'Thuốc men';
+			case 'Supplies.Tools': return 'Dụng cụ';
+			case 'Supplies.Custom': return 'Tuỳ chỉnh';
+			case 'Supplies.FastCheck': return 'Kiểm tra nhanh';
+			case 'Supplies.Name': return 'Tên vật tư';
+			case 'Supplies.NamePlace': return 'Nhập tên vật tư';
+			case 'Supplies.Category': return 'Danh mục';
+			case 'Supplies.Quantity': return 'Số lượng';
+			case 'Supplies.QuantityNum': return 'Nhập số lượng';
+			case 'Supplies.DateAdd': return 'Ngày thêm';
+			case 'Supplies.DateExpired': return 'Ngày hết hạn';
+			case 'Supplies.Note': return 'Ghi chú';
+			case 'Supplies.NotePlaceholder': return 'Nhập ghi chú';
+			case 'Supplies.Important': return 'Vật tư quan trọng';
+			case 'Supplies.Default': return 'Mặc định';
+			case 'Supplies.SortName': return 'A-Z';
+			case 'Supplies.SortCategory': return 'Danh mục';
+			case 'Supplies.SortChecked': return 'Thiếu trước';
+			case 'Supplies.SortExpired': return 'Sắp hết hạn';
+			case 'Supplies.SortImportant': return 'Quan trọng';
+			case 'Supplies.Check': return 'Kiêm tra danh sách';
+			case 'Supplies.CheckConfirm': return 'Xác nhận kiểm tra danh sách vật tư';
+			case 'Supplies.CheckSuccess': return 'Kiểm tra danh sách vật tư thành công';
+			case 'Supplies.QuantityNumError': return 'Số lượng vật tư phải lớn hơn 0';
+			case 'Supplies.Edit': return 'Chỉnh sửa vật tư';
+			case 'Supplies.Delete': return 'Xoá vật tư';
+			case 'Supplies.Contain': return 'Đã có';
+			case 'Supplies.LastChecked': return 'Lần kiểm tra cuối';
+			case 'Supplies.UpdateAt': return 'Cập nhật lúc';
+			case 'Supplies.Detail': return 'Chi tiết vật tư';
+			case 'EmergencyInfo.Title': return 'Thông tin khẩn cấp';
+			case 'EmergencyInfo.Edit': return 'Chỉnh sửa thông tin';
+			case 'EmergencyInfo.Name': return 'Họ và tên';
+			case 'EmergencyInfo.NamePlace': return 'Nhập họ và tên';
+			case 'EmergencyInfo.DateOfBirth': return 'Ngày sinh';
+			case 'EmergencyInfo.DateOfBirthPlace': return 'Chọn ngày sinh';
+			case 'EmergencyInfo.Gender': return 'Giới tính';
+			case 'EmergencyInfo.MedicalInfo': return 'Thông tin y tế';
+			case 'EmergencyInfo.BloodType': return 'Nhóm máu';
+			case 'EmergencyInfo.BloodTypePlace': return 'Chọn nhóm máu';
+			case 'EmergencyInfo.Allergy': return 'Dị ứng';
+			case 'EmergencyInfo.AllergyPlace': return 'Nhập dị ứng (nếu có)';
+			case 'EmergencyInfo.UnderlyingDiseases': return 'Bệnh nền';
+			case 'EmergencyInfo.UnderlyingDiseasesPlace': return 'Nhập tiền sử bệnh (nếu có)';
+			case 'EmergencyInfo.Medication': return 'Thuốc đang dùng';
+			case 'EmergencyInfo.MedicationPlace': return 'Nhập thuốc đang dùng (nếu có)';
+			case 'EmergencyInfo.MedicalCondition': return 'Tình trạng sức khoẻ';
+			case 'EmergencyInfo.MedicalConditionPlace': return 'Nhập tình trạng sức khoẻ (nếu có)';
+			case 'EmergencyInfo.OrganDonation': return 'Hiến tạng';
+			case 'EmergencyInfo.EmergencyContact': return 'Người liên hệ khẩn cấp';
+			case 'EmergencyInfo.EmergencyContactPlace': return 'Nhập người liên hệ khẩn cấp';
+			case 'EmergencyInfo.EmergencyPhone': return 'Số điện thoại liên hệ khẩn cấp';
+			case 'EmergencyInfo.EmergencyPhonePlace': return 'Nhập số điện thoại liên hệ khẩn cấp';
+			case 'EmergencyInfo.SaveSuccess': return 'Lưu thông tin khẩn cấp thành công';
+			case 'EmergencyInfo.NoteSpecific': return 'Ghi chú đặc biệt';
+			case 'EmergencyInfo.Setting': return 'Cài đặt hiển thị';
 			case 'MeritType.Other': return 'Khác';
 			case 'MeritType.Liberation': return 'Phóng sinh';
 			case 'MeritType.Giving': return 'Bố thí';

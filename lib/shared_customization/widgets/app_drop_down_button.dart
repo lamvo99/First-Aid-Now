@@ -58,7 +58,7 @@ class AppDropdownButton<T> extends StatelessWidget {
         const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
     this.icon,
     this.isExpanded = true,
-    this.radius = 6,
+    this.radius = 16,
     this.isRequired = true,
     this.borderColor,
     this.placeholderSize = 14,

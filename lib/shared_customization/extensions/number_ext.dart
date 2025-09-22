@@ -170,8 +170,8 @@ extension IntExt on int? {
   bool get isHaveCount => this == 0;
   bool get isBiggerZeroandNull => this != null && this! > 0;
 
-  DateTime get toDateTimeFromTimeStamp {
-    if (this == null || this == 0) return DateTime.now();
+  DateTime? get toDateTimeFromTimeStamp {
+    if (this == null || this == 0) return null;
     DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(this!.toInt());
     return dateTime;
   }

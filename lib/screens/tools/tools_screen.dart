@@ -8,7 +8,6 @@ import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/public_providers/export.dart';
 import 'package:first_aid/screens/home/components/title_component_widget.dart';
-import 'package:first_aid/screens/merit_journal/cubit/merit_journal_cubit.dart';
 import 'package:flutter/material.dart';
 
 // Package imports:
@@ -67,10 +66,9 @@ class _ToolsScreenState extends State<ToolsScreen> {
           width: 1.sw,
           height: 1.sh,
           color: AppColors.white,
-          padding: EdgeInsets.only(top: 64, left: 16, right: 16),
+          padding: EdgeInsets.only(top: 16, left: 16, right: 16),
           child: AppRefreshIndicator(
             onRefresh: () async {
-              _context.read<MeritJournalCubit>().getListMerit();
             },
             child: Column(
               spacing: 12,
@@ -139,7 +137,9 @@ class _ToolsScreenState extends State<ToolsScreen> {
                       ),
                       Expanded(
                         child: ActionItem(
-                          onTap: () {},
+                          onTap: () {
+                            context.pushNamed(Routes.supplyScreen);
+                          },
                           title: i18n.Tool.Kit,
                           icon: Assets.icons.icFirstAidKit,
                           color: AppColors.primary300,

@@ -4,55 +4,88 @@
   "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
   "entities": [
     {
-      "id": "1:5569934779932106919",
-      "lastPropertyId": "7:7985472910228302918",
-      "name": "MeritEntity",
+      "id": "2:8787311427176426281",
+      "lastPropertyId": "11:2597030806202271025",
+      "name": "SupplyEntity",
       "properties": [
         {
-          "id": "1:6762251251760336055",
+          "id": "1:8951913023019204612",
           "name": "id",
           "type": 6,
           "flags": 1
         },
         {
-          "id": "3:8339180912444427235",
+          "id": "2:6393873797347445612",
           "name": "name",
           "type": 9
         },
         {
-          "id": "4:4527913469264388143",
-          "name": "description",
+          "id": "3:5357482452745406614",
+          "name": "note",
           "type": 9
         },
         {
-          "id": "5:888508973278993105",
+          "id": "4:8274585349025675332",
+          "name": "supplyCategoryIndex",
+          "type": 6
+        },
+        {
+          "id": "5:1293051688920625463",
+          "name": "quantity",
+          "type": 6
+        },
+        {
+          "id": "6:8127850929771263610",
+          "name": "dateExpired",
+          "type": 6
+        },
+        {
+          "id": "7:9116876756964647302",
+          "name": "lastCheckedAt",
+          "type": 6
+        },
+        {
+          "id": "8:5506010386923913011",
           "name": "createdAt",
           "type": 6
         },
         {
-          "id": "6:6881104067872311289",
-          "name": "meritTypeIndex",
+          "id": "9:4780799289448040390",
+          "name": "updatedAt",
           "type": 6
         },
         {
-          "id": "7:7985472910228302918",
-          "name": "recipient",
-          "type": 9
+          "id": "10:6816573624173838895",
+          "name": "isImportant",
+          "type": 1
+        },
+        {
+          "id": "11:2597030806202271025",
+          "name": "isChecked",
+          "type": 1
         }
       ],
       "relations": []
     }
   ],
-  "lastEntityId": "1:5569934779932106919",
+  "lastEntityId": "2:8787311427176426281",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
   "modelVersion": 5,
   "modelVersionParserMinimum": 5,
-  "retiredEntityUids": [],
+  "retiredEntityUids": [
+    5569934779932106919
+  ],
   "retiredIndexUids": [],
   "retiredPropertyUids": [
-    4444448841942027272
+    4444448841942027272,
+    6762251251760336055,
+    8339180912444427235,
+    4527913469264388143,
+    888508973278993105,
+    6881104067872311289,
+    7985472910228302918
   ],
   "retiredRelationUids": [],
   "version": 1

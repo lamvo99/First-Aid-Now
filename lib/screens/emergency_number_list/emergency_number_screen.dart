@@ -10,7 +10,6 @@ import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/model/emergency_number/emergency_number.dart';
 import 'package:first_aid/public_providers/export.dart';
 import 'package:first_aid/screens/emergency_number_list/components/emergency_phone_item.dart';
-import 'package:first_aid/screens/merit_journal/cubit/merit_journal_cubit.dart';
 import 'package:flutter/material.dart';
 
 // Package imports:

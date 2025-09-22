@@ -2,9 +2,8 @@
 
 // Package imports:
 import 'package:first_aid/app_common_data/enum/text_align_enum.dart';
-import 'package:first_aid/app_common_data/enum_new/age_group.dart';
-import 'package:first_aid/app_common_data/enum_new/learn_category.dart';
-import 'package:first_aid/app_common_data/enum_new/severity_level.dart';
+import 'package:first_aid/app_common_data/export.dart';
+import 'package:first_aid/app_common_data/enum/severity_level.dart';
 import 'package:first_aid/model/category/category.dart';
 import 'package:first_aid/model/references/references.dart';
 import 'package:first_aid/model/reviewer_info/reviewer_info.dart';

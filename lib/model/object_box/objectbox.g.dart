@@ -13,51 +13,81 @@ import 'package:objectbox/internal.dart'
     as obx_int; // generated code can access "internal" functionality
 import 'package:objectbox/objectbox.dart' as obx;
 
-import '../../model/merit/merit.dart';
+import '../../model/supply/supply.dart';
 
 export 'package:objectbox/objectbox.dart'; // so that callers only have to import this file
 
 final _entities = <obx_int.ModelEntity>[
   obx_int.ModelEntity(
-    id: const obx_int.IdUid(1, 5569934779932106919),
-    name: 'MeritEntity',
-    lastPropertyId: const obx_int.IdUid(7, 7985472910228302918),
+    id: const obx_int.IdUid(2, 8787311427176426281),
+    name: 'SupplyEntity',
+    lastPropertyId: const obx_int.IdUid(11, 2597030806202271025),
     flags: 0,
     properties: <obx_int.ModelProperty>[
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(1, 6762251251760336055),
+        id: const obx_int.IdUid(1, 8951913023019204612),
         name: 'id',
         type: 6,
         flags: 1,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(3, 8339180912444427235),
+        id: const obx_int.IdUid(2, 6393873797347445612),
         name: 'name',
         type: 9,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(4, 4527913469264388143),
-        name: 'description',
+        id: const obx_int.IdUid(3, 5357482452745406614),
+        name: 'note',
         type: 9,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(5, 888508973278993105),
+        id: const obx_int.IdUid(4, 8274585349025675332),
+        name: 'supplyCategoryIndex',
+        type: 6,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(5, 1293051688920625463),
+        name: 'quantity',
+        type: 6,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(6, 8127850929771263610),
+        name: 'dateExpired',
+        type: 6,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(7, 9116876756964647302),
+        name: 'lastCheckedAt',
+        type: 6,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(8, 5506010386923913011),
         name: 'createdAt',
         type: 6,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(6, 6881104067872311289),
-        name: 'meritTypeIndex',
+        id: const obx_int.IdUid(9, 4780799289448040390),
+        name: 'updatedAt',
         type: 6,
         flags: 0,
       ),
       obx_int.ModelProperty(
-        id: const obx_int.IdUid(7, 7985472910228302918),
-        name: 'recipient',
-        type: 9,
+        id: const obx_int.IdUid(10, 6816573624173838895),
+        name: 'isImportant',
+        type: 1,
+        flags: 0,
+      ),
+      obx_int.ModelProperty(
+        id: const obx_int.IdUid(11, 2597030806202271025),
+        name: 'isChecked',
+        type: 1,
         flags: 0,
       ),
     ],
@@ -103,13 +133,21 @@ obx.Store openStore({
 obx_int.ModelDefinition getObjectBoxModel() {
   final model = obx_int.ModelInfo(
     entities: _entities,
-    lastEntityId: const obx_int.IdUid(1, 5569934779932106919),
+    lastEntityId: const obx_int.IdUid(2, 8787311427176426281),
     lastIndexId: const obx_int.IdUid(0, 0),
     lastRelationId: const obx_int.IdUid(0, 0),
     lastSequenceId: const obx_int.IdUid(0, 0),
-    retiredEntityUids: const [],
+    retiredEntityUids: const [5569934779932106919],
     retiredIndexUids: const [],
-    retiredPropertyUids: const [4444448841942027272],
+    retiredPropertyUids: const [
+      4444448841942027272,
+      6762251251760336055,
+      8339180912444427235,
+      4527913469264388143,
+      888508973278993105,
+      6881104067872311289,
+      7985472910228302918,
+    ],
     retiredRelationUids: const [],
     modelVersion: 5,
     modelVersionParserMinimum: 5,
@@ -117,32 +155,31 @@ obx_int.ModelDefinition getObjectBoxModel() {
   );
 
   final bindings = <Type, obx_int.EntityDefinition>{
-    MeritEntity: obx_int.EntityDefinition<MeritEntity>(
+    SupplyEntity: obx_int.EntityDefinition<SupplyEntity>(
       model: _entities[0],
-      toOneRelations: (MeritEntity object) => [],
-      toManyRelations: (MeritEntity object) => {},
-      getId: (MeritEntity object) => object.id,
-      setId: (MeritEntity object, int id) {
+      toOneRelations: (SupplyEntity object) => [],
+      toManyRelations: (SupplyEntity object) => {},
+      getId: (SupplyEntity object) => object.id,
+      setId: (SupplyEntity object, int id) {
         object.id = id;
       },
-      objectToFB: (MeritEntity object, fb.Builder fbb) {
+      objectToFB: (SupplyEntity object, fb.Builder fbb) {
         final nameOffset =
             object.name == null ? null : fbb.writeString(object.name!);
-        final descriptionOffset =
-            object.description == null
-                ? null
-                : fbb.writeString(object.description!);
-        final recipientOffset =
-            object.recipient == null
-                ? null
-                : fbb.writeString(object.recipient!);
-        fbb.startTable(8);
+        final noteOffset =
+            object.note == null ? null : fbb.writeString(object.note!);
+        fbb.startTable(12);
         fbb.addInt64(0, object.id);
-        fbb.addOffset(2, nameOffset);
-        fbb.addOffset(3, descriptionOffset);
-        fbb.addInt64(4, object.createdAt);
-        fbb.addInt64(5, object.meritTypeIndex);
-        fbb.addOffset(6, recipientOffset);
+        fbb.addOffset(1, nameOffset);
+        fbb.addOffset(2, noteOffset);
+        fbb.addInt64(3, object.supplyCategoryIndex);
+        fbb.addInt64(4, object.quantity);
+        fbb.addInt64(5, object.dateExpired);
+        fbb.addInt64(6, object.lastCheckedAt);
+        fbb.addInt64(7, object.createdAt);
+        fbb.addInt64(8, object.updatedAt);
+        fbb.addBool(9, object.isImportant);
+        fbb.addBool(10, object.isChecked);
         fbb.finish(fbb.endTable());
         return object.id;
       },
@@ -157,30 +194,59 @@ obx_int.ModelDefinition getObjectBoxModel() {
         );
         final nameParam = const fb.StringReader(
           asciiOptimization: true,
-        ).vTableGetNullable(buffer, rootOffset, 8);
-        final descriptionParam = const fb.StringReader(
+        ).vTableGetNullable(buffer, rootOffset, 6);
+        final noteParam = const fb.StringReader(
           asciiOptimization: true,
-        ).vTableGetNullable(buffer, rootOffset, 10);
-        final createdAtParam = const fb.Int64Reader().vTableGetNullable(
+        ).vTableGetNullable(buffer, rootOffset, 8);
+        final supplyCategoryIndexParam = const fb.Int64Reader()
+            .vTableGetNullable(buffer, rootOffset, 10);
+        final quantityParam = const fb.Int64Reader().vTableGetNullable(
           buffer,
           rootOffset,
           12,
         );
-        final meritTypeIndexParam = const fb.Int64Reader().vTableGetNullable(
+        final dateExpiredParam = const fb.Int64Reader().vTableGetNullable(
           buffer,
           rootOffset,
           14,
         );
-        final recipientParam = const fb.StringReader(
-          asciiOptimization: true,
-        ).vTableGetNullable(buffer, rootOffset, 16);
-        final object = MeritEntity(
+        final lastCheckedAtParam = const fb.Int64Reader().vTableGetNullable(
+          buffer,
+          rootOffset,
+          16,
+        );
+        final createdAtParam = const fb.Int64Reader().vTableGetNullable(
+          buffer,
+          rootOffset,
+          18,
+        );
+        final updatedAtParam = const fb.Int64Reader().vTableGetNullable(
+          buffer,
+          rootOffset,
+          20,
+        );
+        final isImportantParam = const fb.BoolReader().vTableGetNullable(
+          buffer,
+          rootOffset,
+          22,
+        );
+        final isCheckedParam = const fb.BoolReader().vTableGetNullable(
+          buffer,
+          rootOffset,
+          24,
+        );
+        final object = SupplyEntity(
           id: idParam,
           name: nameParam,
-          description: descriptionParam,
+          note: noteParam,
+          supplyCategoryIndex: supplyCategoryIndexParam,
+          quantity: quantityParam,
+          dateExpired: dateExpiredParam,
+          lastCheckedAt: lastCheckedAtParam,
           createdAt: createdAtParam,
-          meritTypeIndex: meritTypeIndexParam,
-          recipient: recipientParam,
+          updatedAt: updatedAtParam,
+          isImportant: isImportantParam,
+          isChecked: isCheckedParam,
         );
 
         return object;
@@ -191,35 +257,60 @@ obx_int.ModelDefinition getObjectBoxModel() {
   return obx_int.ModelDefinition(model, bindings);
 }
 
-/// [MeritEntity] entity fields to define ObjectBox queries.
-class MeritEntity_ {
-  /// See [MeritEntity.id].
-  static final id = obx.QueryIntegerProperty<MeritEntity>(
+/// [SupplyEntity] entity fields to define ObjectBox queries.
+class SupplyEntity_ {
+  /// See [SupplyEntity.id].
+  static final id = obx.QueryIntegerProperty<SupplyEntity>(
     _entities[0].properties[0],
   );
 
-  /// See [MeritEntity.name].
-  static final name = obx.QueryStringProperty<MeritEntity>(
+  /// See [SupplyEntity.name].
+  static final name = obx.QueryStringProperty<SupplyEntity>(
     _entities[0].properties[1],
   );
 
-  /// See [MeritEntity.description].
-  static final description = obx.QueryStringProperty<MeritEntity>(
+  /// See [SupplyEntity.note].
+  static final note = obx.QueryStringProperty<SupplyEntity>(
     _entities[0].properties[2],
   );
 
-  /// See [MeritEntity.createdAt].
-  static final createdAt = obx.QueryIntegerProperty<MeritEntity>(
+  /// See [SupplyEntity.supplyCategoryIndex].
+  static final supplyCategoryIndex = obx.QueryIntegerProperty<SupplyEntity>(
     _entities[0].properties[3],
   );
 
-  /// See [MeritEntity.meritTypeIndex].
-  static final meritTypeIndex = obx.QueryIntegerProperty<MeritEntity>(
+  /// See [SupplyEntity.quantity].
+  static final quantity = obx.QueryIntegerProperty<SupplyEntity>(
     _entities[0].properties[4],
   );
 
-  /// See [MeritEntity.recipient].
-  static final recipient = obx.QueryStringProperty<MeritEntity>(
+  /// See [SupplyEntity.dateExpired].
+  static final dateExpired = obx.QueryIntegerProperty<SupplyEntity>(
     _entities[0].properties[5],
+  );
+
+  /// See [SupplyEntity.lastCheckedAt].
+  static final lastCheckedAt = obx.QueryIntegerProperty<SupplyEntity>(
+    _entities[0].properties[6],
+  );
+
+  /// See [SupplyEntity.createdAt].
+  static final createdAt = obx.QueryIntegerProperty<SupplyEntity>(
+    _entities[0].properties[7],
+  );
+
+  /// See [SupplyEntity.updatedAt].
+  static final updatedAt = obx.QueryIntegerProperty<SupplyEntity>(
+    _entities[0].properties[8],
+  );
+
+  /// See [SupplyEntity.isImportant].
+  static final isImportant = obx.QueryBooleanProperty<SupplyEntity>(
+    _entities[0].properties[9],
+  );
+
+  /// See [SupplyEntity.isChecked].
+  static final isChecked = obx.QueryBooleanProperty<SupplyEntity>(
+    _entities[0].properties[10],
   );
 }
