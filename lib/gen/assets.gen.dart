@@ -236,10 +236,6 @@ class $AssetsIconGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/18032191-simple-compass-rose.jpg
-  AssetGenImage get a18032191SimpleCompassRose =>
-      const AssetGenImage('assets/icons/18032191-simple-compass-rose.jpg');
-
   /// File path: assets/icons/ic_add_circle.svg
   SvgGenImage get icAddCircle =>
       const SvgGenImage('assets/icons/ic_add_circle.svg');
@@ -278,6 +274,13 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_avatar.svg
   SvgGenImage get icAvatar => const SvgGenImage('assets/icons/ic_avatar.svg');
 
+  /// File path: assets/icons/ic_az.svg
+  SvgGenImage get icAz => const SvgGenImage('assets/icons/ic_az.svg');
+
+  /// File path: assets/icons/ic_band_aid.svg
+  SvgGenImage get icBandAid =>
+      const SvgGenImage('assets/icons/ic_band_aid.svg');
+
   /// File path: assets/icons/ic_book.svg
   SvgGenImage get icBook => const SvgGenImage('assets/icons/ic_book.svg');
 
@@ -307,6 +310,13 @@ class $AssetsIconsGen {
   SvgGenImage get icCardInfo =>
       const SvgGenImage('assets/icons/ic_card_info.svg');
 
+  /// File path: assets/icons/ic_category.svg
+  SvgGenImage get icCategory =>
+      const SvgGenImage('assets/icons/ic_category.svg');
+
+  /// File path: assets/icons/ic_check.svg
+  SvgGenImage get icCheck => const SvgGenImage('assets/icons/ic_check.svg');
+
   /// File path: assets/icons/ic_clock.svg
   SvgGenImage get icClock => const SvgGenImage('assets/icons/ic_clock.svg');
 
@@ -329,6 +339,13 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_custom.svg
   SvgGenImage get icCustom => const SvgGenImage('assets/icons/ic_custom.svg');
 
+  /// File path: assets/icons/ic_delete.svg
+  SvgGenImage get icDelete => const SvgGenImage('assets/icons/ic_delete.svg');
+
+  /// File path: assets/icons/ic_dot_menu.svg
+  SvgGenImage get icDotMenu =>
+      const SvgGenImage('assets/icons/ic_dot_menu.svg');
+
   /// File path: assets/icons/ic_dove.svg
   SvgGenImage get icDove => const SvgGenImage('assets/icons/ic_dove.svg');
 
@@ -336,12 +353,18 @@ class $AssetsIconsGen {
   SvgGenImage get icDownload =>
       const SvgGenImage('assets/icons/ic_download.svg');
 
+  /// File path: assets/icons/ic_edit.svg
+  SvgGenImage get icEdit => const SvgGenImage('assets/icons/ic_edit.svg');
+
   /// File path: assets/icons/ic_error_banner.svg
   SvgGenImage get icErrorBanner =>
       const SvgGenImage('assets/icons/ic_error_banner.svg');
 
   /// File path: assets/icons/ic_event.svg
   SvgGenImage get icEvent => const SvgGenImage('assets/icons/ic_event.svg');
+
+  /// File path: assets/icons/ic_expired.svg
+  SvgGenImage get icExpired => const SvgGenImage('assets/icons/ic_expired.svg');
 
   /// File path: assets/icons/ic_eye.svg
   SvgGenImage get icEye => const SvgGenImage('assets/icons/ic_eye.svg');
@@ -405,6 +428,10 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/ic_magnet.svg
   SvgGenImage get icMagnet => const SvgGenImage('assets/icons/ic_magnet.svg');
+
+  /// File path: assets/icons/ic_medicine.svg
+  SvgGenImage get icMedicine =>
+      const SvgGenImage('assets/icons/ic_medicine.svg');
 
   /// File path: assets/icons/ic_meditation_type.svg
   SvgGenImage get icMeditationType =>
@@ -484,11 +511,28 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_share.svg
   SvgGenImage get icShare => const SvgGenImage('assets/icons/ic_share.svg');
 
+  /// File path: assets/icons/ic_shield.svg
+  SvgGenImage get icShield => const SvgGenImage('assets/icons/ic_shield.svg');
+
   /// File path: assets/icons/ic_signal.svg
   SvgGenImage get icSignal => const SvgGenImage('assets/icons/ic_signal.svg');
 
   /// File path: assets/icons/ic_siren.svg
   SvgGenImage get icSiren => const SvgGenImage('assets/icons/ic_siren.svg');
+
+  /// File path: assets/icons/ic_sort.svg
+  SvgGenImage get icSort => const SvgGenImage('assets/icons/ic_sort.svg');
+
+  /// File path: assets/icons/ic_square_check.svg
+  SvgGenImage get icSquareCheck =>
+      const SvgGenImage('assets/icons/ic_square_check.svg');
+
+  /// File path: assets/icons/ic_square_check_border.svg
+  SvgGenImage get icSquareCheckBorder =>
+      const SvgGenImage('assets/icons/ic_square_check_border.svg');
+
+  /// File path: assets/icons/ic_star.svg
+  SvgGenImage get icStar => const SvgGenImage('assets/icons/ic_star.svg');
 
   /// File path: assets/icons/ic_success_banner.svg
   SvgGenImage get icSuccessBanner =>
@@ -496,6 +540,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/ic_syringe.svg
   SvgGenImage get icSyringe => const SvgGenImage('assets/icons/ic_syringe.svg');
+
+  /// File path: assets/icons/ic_target.svg
+  SvgGenImage get icTarget => const SvgGenImage('assets/icons/ic_target.svg');
 
   /// File path: assets/icons/ic_teacher.svg
   SvgGenImage get icTeacher => const SvgGenImage('assets/icons/ic_teacher.svg');
@@ -517,12 +564,14 @@ class $AssetsIconsGen {
   SvgGenImage get icToolActive =>
       const SvgGenImage('assets/icons/ic_tool_active.svg');
 
+  /// File path: assets/icons/ic_tools.svg
+  SvgGenImage get icTools => const SvgGenImage('assets/icons/ic_tools.svg');
+
   /// File path: assets/icons/ic_voice.svg
   SvgGenImage get icVoice => const SvgGenImage('assets/icons/ic_voice.svg');
 
   /// List of all assets
-  List<dynamic> get values => [
-    a18032191SimpleCompassRose,
+  List<SvgGenImage> get values => [
     icAddCircle,
     icAddRound,
     icAlarm,
@@ -533,6 +582,8 @@ class $AssetsIconsGen {
     icArrowTop,
     icAsterisk,
     icAvatar,
+    icAz,
+    icBandAid,
     icBook,
     icBookActive,
     icBookOpen,
@@ -541,6 +592,8 @@ class $AssetsIconsGen {
     icCallEmergency,
     icCandle,
     icCardInfo,
+    icCategory,
+    icCheck,
     icClock,
     icClose,
     icCompass,
@@ -548,10 +601,14 @@ class $AssetsIconsGen {
     icCopy,
     icCpr,
     icCustom,
+    icDelete,
+    icDotMenu,
     icDove,
     icDownload,
+    icEdit,
     icErrorBanner,
     icEvent,
+    icExpired,
     icEye,
     icEyeOff,
     icFile,
@@ -570,6 +627,7 @@ class $AssetsIconsGen {
     icLotus,
     icLunar,
     icMagnet,
+    icMedicine,
     icMeditationType,
     icMenu,
     icMeter,
@@ -593,16 +651,23 @@ class $AssetsIconsGen {
     icSettingActive,
     icSettingTotal,
     icShare,
+    icShield,
     icSignal,
     icSiren,
+    icSort,
+    icSquareCheck,
+    icSquareCheckBorder,
+    icStar,
     icSuccessBanner,
     icSyringe,
+    icTarget,
     icTeacher,
     icTemple,
     icThermometer,
     icTimer,
     icTool,
     icToolActive,
+    icTools,
     icVoice,
   ];
 }

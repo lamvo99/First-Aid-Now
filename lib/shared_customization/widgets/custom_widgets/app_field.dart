@@ -1,4 +1,5 @@
 // Flutter imports:
+import 'package:first_aid/app_common_data/app_colors.dart';
 import 'package:flutter/material.dart';
 
 // Project imports:
@@ -38,7 +39,7 @@ class AppField extends StatelessWidget {
               text: TextSpan(
                 children: [TextSpan(
                     text: errorLabel ?? '',
-                    style: AppTextStyle.textSecondary14W500,
+                    style: AppTextStyle.textSecondary14W500.copyWith(color: AppColors.error600),
                   )
                 ],
               ),

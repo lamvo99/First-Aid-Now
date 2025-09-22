@@ -3,7 +3,6 @@ import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/screens/home/home_screen.dart';
 import 'package:first_aid/screens/learn/learn_screen.dart';
-import 'package:first_aid/screens/merit_journal/merit_journal_screen.dart';
 import 'package:first_aid/screens/setting/setting_screen.dart';
 import 'package:first_aid/screens/tools/tools_screen.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +61,7 @@ extension MainTabsExt on MainTabs {
         MainTabs.home: const HomeScreen(),
         MainTabs.learn: const LearnScreen(),
         MainTabs.tool: const ToolsScreen(),
-        MainTabs.quiz: const MeritJournalScreen(),
+        MainTabs.quiz: const ToolsScreen(),
         // MainTabs.setting: const SettingScreen(),
       }[this]!;
 

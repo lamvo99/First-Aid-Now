@@ -61,6 +61,20 @@ extension DateTimeExt on DateTime? {
     }
   }
 
+  Color get checkExpiredBorderColor {
+    if (this != null) {
+      final difference = this!.difference(DateTime.now());
+
+      if (difference.isNegative) {
+        return AppColors.error600;
+      } else if (difference.inDays <= 3) {
+        return AppColors.warning500;
+      }
+    }
+
+    return AppColors.gray300;
+  }
+
   int getDaysInMonth() {
     if (this!.month == DateTime.february) {
       final bool isLeapYear =

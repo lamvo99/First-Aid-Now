@@ -8,7 +8,6 @@
 import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/public_providers/export.dart';
-import 'package:first_aid/screens/merit_journal/cubit/merit_journal_cubit.dart';
 import 'package:flutter/material.dart';
 
 // Package imports:
@@ -69,7 +68,6 @@ class _SettingScreenState extends State<SettingScreen> {
           padding: EdgeInsets.only(top: 64, left: 16, right: 16),
           child: AppRefreshIndicator(
             onRefresh: () async {
-              _context.read<MeritJournalCubit>().getListMerit();
             },
             child: Column(
               spacing: 12,

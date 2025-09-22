@@ -277,7 +277,7 @@ class _AppLayoutState extends State<AppLayout> {
                       AppText(
                         widget.title ?? "",
                         textAlign: TextAlign.center,
-                        style: AppTextStyle.textSecondary14W500.copyWith(fontSize: 16),
+                        style: AppTextStyle.textSecondary14W500.copyWith(fontSize: 18),
                       ),
               actions: widget.actions,
             ),
