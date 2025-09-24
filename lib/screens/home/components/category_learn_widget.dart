@@ -1,13 +1,9 @@
-import 'package:first_aid/app_common_data/app_colors.dart';
-import 'package:first_aid/app_common_data/app_text_sytle.dart';
 import 'package:first_aid/app_common_data/export.dart';
 import 'package:first_aid/data/category/category_data.dart';
-import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/model/category/category.dart';
 import 'package:first_aid/screens/home/components/title_component_widget.dart';
 import 'package:first_aid/screens/home/cubit/home_cubit.dart';
-import 'package:first_aid/shared_customization/widgets/app_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

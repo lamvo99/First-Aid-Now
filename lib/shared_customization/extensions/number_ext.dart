@@ -135,7 +135,7 @@ extension NumExt on num? {
       degrees += (this!.isNegative ? -1 : 1);
     }
 
-    return "$degrees°${minutes}'${sec}\"";
+    return "$degrees°$minutes'$sec\"";
 
   }
 

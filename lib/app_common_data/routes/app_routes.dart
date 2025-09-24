@@ -1,6 +1,6 @@
 // Flutter imports:
-import 'package:first_aid/model/emergency_number/emergency_number.dart';
 import 'package:first_aid/screens/compass/compass_screen.dart';
+import 'package:first_aid/screens/emergency_card/emergency_card_screen.dart';
 import 'package:first_aid/screens/emergency_number_list/emergency_number_screen.dart';
 import 'package:first_aid/screens/language_setting_screen/language_setting_screen.dart';
 import 'package:first_aid/screens/main_screen/main_screen.dart';
@@ -25,6 +25,7 @@ class Routes {
   static String compassScreen = '/compass-screen';
   static String soundMeterScreen = '/sound-meter-screen';
   static String supplyScreen = '/supply-screen';
+  static String emergencyCardScreen = '/emergency-card-screen';
 
   static String prayerScree = '/prayer-screen';
   static String dictionaryListScreen = '/dict-list-screen';
@@ -40,6 +41,7 @@ class Routes {
     compassScreen: (context) => const CompassScreen(),
     soundMeterScreen: (context) => const SoundMeterScreen(),
     supplyScreen: (context) => const SupplyScreen(),
+    emergencyCardScreen: (context) => const EmergencyCardScreen(),
 
 
     prayerScree: (context) => PrayerScreen(),

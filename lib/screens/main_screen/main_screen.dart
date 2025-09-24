@@ -8,7 +8,6 @@ import 'package:first_aid/public_providers/export.dart';
 import 'package:first_aid/screens/learn/cubit/learn_cubit.dart';
 import 'package:first_aid/screens/home/cubit/home_cubit.dart';
 import 'package:first_aid/screens/setting/cubit/setting_cubit.dart';
-import 'package:first_aid/screens/setting/setting_screen.dart';
 import 'package:first_aid/screens/tools/cubit/tools_cubit.dart';
 import 'package:flutter/material.dart';
 

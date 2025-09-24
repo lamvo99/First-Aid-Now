@@ -9,7 +9,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // Project imports:
 import '../../../../app_common_data/export.dart';
 import '../../../export.dart';
-import '/app_common_data/app_colors.dart';
 
 class SuccessDialogContent extends BaseDialogContent {
   final String? title;

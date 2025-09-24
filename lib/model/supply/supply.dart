@@ -1,6 +1,5 @@
 // ignore_for_file: invalid_annotation_target
 
-import 'package:first_aid/app_common_data/enum/merit_type.dart';
 import 'package:first_aid/app_common_data/enum/supplies_catgory.dart';
 import 'package:first_aid/shared_customization/export.dart';
 import 'package:first_aid/shared_customization/extensions/date_time_converter.dart';
@@ -71,10 +70,10 @@ class SupplyEntity {
             ? SuppliesCategory.values[supplyCategoryIndex!]
             : null,
         quantity: quantity,
-        dateExpired: dateExpired?.toDateTimeFromTimeStamp ?? null,
-        lastCheckedAt: lastCheckedAt?.toDateTimeFromTimeStamp ?? null,
-        createdAt: createdAt?.toDateTimeFromTimeStamp ?? null,
-        updatedAt: updatedAt?.toDateTimeFromTimeStamp ?? null,
+        dateExpired: dateExpired?.toDateTimeFromTimeStamp,
+        lastCheckedAt: lastCheckedAt?.toDateTimeFromTimeStamp,
+        createdAt: createdAt?.toDateTimeFromTimeStamp,
+        updatedAt: updatedAt?.toDateTimeFromTimeStamp,
         isImportant: isImportant,
         isChecked: isChecked,
       );
@@ -88,10 +87,10 @@ class SupplyEntity {
       supplyCategoryIndex: supply.supplyCategory != null
           ? SuppliesCategory.values.indexOf(supply.supplyCategory!)
           : null,
-      dateExpired: supply.dateExpired?.millisecondsSinceEpoch ?? null,
-      lastCheckedAt: supply.lastCheckedAt?.millisecondsSinceEpoch ?? null,
-      createdAt: supply.createdAt?.millisecondsSinceEpoch ?? null,
-      updatedAt: supply.updatedAt?.millisecondsSinceEpoch ?? null,
+      dateExpired: supply.dateExpired?.millisecondsSinceEpoch,
+      lastCheckedAt: supply.lastCheckedAt?.millisecondsSinceEpoch,
+      createdAt: supply.createdAt?.millisecondsSinceEpoch,
+      updatedAt: supply.updatedAt?.millisecondsSinceEpoch,
       isImportant: supply.isImportant,
       isChecked: supply.isChecked,
     );

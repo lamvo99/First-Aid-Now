@@ -26,7 +26,7 @@ class _AppToggleButtonState extends State<AppToggleButton> {
         padding: const EdgeInsets.all(2),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(999),
-          color: widget.value ? AppColors.gray800 : AppColors.gray400,
+          color: widget.value ? AppColors.success600 : AppColors.gray400,
         ),
         child: AnimatedAlign(
           duration: const Duration(milliseconds: 300),
@@ -37,7 +37,7 @@ class _AppToggleButtonState extends State<AppToggleButton> {
             borderRadius: BorderRadius.circular(9999),
             color: Colors.white,
             child: widget.value
-                ? const Icon(Icons.check_rounded, size: 12, color: AppColors.gray800)
+                ? const Icon(Icons.check_rounded, size: 12, color: AppColors.success600)
                 : const Icon(Icons.check_rounded, size: 12, color: AppColors.gray400),
           ),
         ),

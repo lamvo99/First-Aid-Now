@@ -150,6 +150,7 @@
   "EmergencyInfo": {
     "Title": "Thông tin khẩn cấp",
     "Edit": "Chỉnh sửa thông tin",
+    "Info": "Thông tin cá nhân",
     "Name": "Họ và tên",
     "NamePlace": "Nhập họ và tên",
     "DateOfBirth": "Ngày sinh",
@@ -160,20 +161,30 @@
     "BloodTypePlace": "Chọn nhóm máu",
     "Allergy": "Dị ứng",
     "AllergyPlace": "Nhập dị ứng (nếu có)",
+    "AllergyList": "Danh sách dị ứng",
     "UnderlyingDiseases": "Bệnh nền",
     "UnderlyingDiseasesPlace": "Nhập tiền sử bệnh (nếu có)",
     "Medication": "Thuốc đang dùng",
     "MedicationPlace": "Nhập thuốc đang dùng (nếu có)",
+    "MedicationList": "Danh sách thuốc",
     "MedicalCondition": "Tình trạng sức khoẻ",
     "MedicalConditionPlace": "Nhập tình trạng sức khoẻ (nếu có)",
+    "MedicalConditionList": "Các loại bệnh",
     "OrganDonation": "Hiến tạng",
+    "EmergencyContactNum": "Người liên hệ khẩn cấp số {num}",
     "EmergencyContact": "Người liên hệ khẩn cấp",
     "EmergencyContactPlace": "Nhập người liên hệ khẩn cấp",
     "EmergencyPhone": "Số điện thoại liên hệ khẩn cấp",
     "EmergencyPhonePlace": "Nhập số điện thoại liên hệ khẩn cấp",
+    "Relationship": "Mối quan hệ",
     "SaveSuccess": "Lưu thông tin khẩn cấp thành công",
     "NoteSpecific": "Ghi chú đặc biệt",
-    "Setting": "Cài đặt hiển thị"
+    "Setting": "Cài đặt hiển thị",
+    "UpdateSuccess": "Cập nhật thông tin thành công",
+    "NoNote": "Chưa có ghi chú đặc biệt nào",
+    "LastUpdated": "Cập nhật lần cuối",
+    "Export": "Xuất thông tin thành công",
+    "ExportError": "Xuất thông tin không thành công"
   },
   "RelationShip": {
     "Father": "Cha",
@@ -191,7 +202,13 @@
     "Niece": "Cháu gái (con của anh/chị/em ruột)",
     "Husband": "Chồng",
     "Wife": "Vợ",
+    "Friend": "Bạn bè",
+    "Colleague": "Đồng nghiệp",
     "Other": "Khác"
+  },
+  "GenderType": {
+    "Male": "Nam",
+    "Female": "Nữ"
   },
 
 
@@ -511,7 +528,9 @@
     "Yes": "Đồng ý",
     "GalleryPermissionPurpose": "Ứng dụng sử dụng ảnh trong thư viện",
     "CanNotAccessGalleryPermission": "Không thể truy cập thư viện ảnh vì quyền truy cập bị từ chối",
-    "PleaseAccessGalleryPermission": "Vui lòng cho phép quyền truy cập vào thư viện ảnh"
+    "PleaseAccessGalleryPermission": "Vui lòng cho phép quyền truy cập vào thư viện ảnh",
+    "PermissionRequired": "Quyền cần thiết",
+    "PleaseAcceptPermission": "Vui lòng chấp nhận quyền"
   },
   "LostConnection": {
     "LostConnection": "Mất kết nối",

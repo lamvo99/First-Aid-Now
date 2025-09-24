@@ -1,4 +1,3 @@
-import 'package:first_aid/app_common_data/app_colors.dart';
 import 'package:first_aid/app_common_data/export.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/screens/home/components/title_component_widget.dart';

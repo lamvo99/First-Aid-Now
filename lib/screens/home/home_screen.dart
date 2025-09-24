@@ -27,7 +27,6 @@ import '../../app_common_data/export.dart';
 import '../../shared_customization/export.dart';
 import '/screens/bloc_base_screen.dart';
 import 'components/emergency_lesson_widget.dart';
-import 'components/title_component_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

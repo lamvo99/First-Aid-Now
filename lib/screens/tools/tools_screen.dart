@@ -102,7 +102,9 @@ class _ToolsScreenState extends State<ToolsScreen> {
                       ),
                       Expanded(
                         child: ActionItem(
-                          onTap: () {},
+                          onTap: () {
+                            context.pushNamed(Routes.emergencyCardScreen);
+                          },
                           title: i18n.Tool.Card,
                           icon: Assets.icons.icCardInfo,
                           color: AppColors.primary300,

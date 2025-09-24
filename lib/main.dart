@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:first_aid/app_common_data/common_data/global_variable.dart';
 import 'package:first_aid/generated/strings.g.dart';
-import 'package:first_aid/shared_customization/data/app_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';

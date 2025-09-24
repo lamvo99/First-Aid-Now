@@ -33,7 +33,7 @@ class _EmergencyLessonWidgetState extends State<EmergencyLessonWidget> {
               return EmergencyLessonItem(
                 onTap: () {},
               );
-            }).toList()
+            })
           ],
         ),
       ),

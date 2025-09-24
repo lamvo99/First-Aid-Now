@@ -1,20 +1,15 @@
 // Flutter imports:
 import 'dart:async';
-import 'dart:math' as math;
 
-import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/screens/bloc_base_screen.dart';
 import 'package:flutter/material.dart';
 
 // Package imports:
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_compass/flutter_compass.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:noise_meter/noise_meter.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:sensors_plus/sensors_plus.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 // Project imports:
