@@ -1,9 +1,7 @@
-import 'package:first_aid/app_common_data/enum/supplies_catgory.dart';
 import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/model/export.dart';
 import 'package:first_aid/screens/supply_screen/cubit/supply_cubit.dart';
-import 'package:first_aid/shared_customization/widgets/app_select_date.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,9 +12,9 @@ class FastCheckWidget extends StatefulWidget {
   final VoidCallback? cancelFunc;
 
   const FastCheckWidget({
-    Key? key,
+    super.key,
     this.cancelFunc,
-  }) : super(key: key);
+  });
 
   @override
   State<FastCheckWidget> createState() => _FastCheckWidgetState();

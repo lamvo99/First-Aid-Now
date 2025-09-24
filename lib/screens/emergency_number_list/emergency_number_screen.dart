@@ -141,7 +141,7 @@ class _EmergencyNumberScreenState extends State<EmergencyNumberScreen> {
             children: [
               ...listEmergency.map((emergencyNumber) {
                 return EmergencyPhoneItem(emergencyNumber: emergencyNumber);
-              }).toList()
+              })
             ],
           ),
         ]
@@ -177,7 +177,7 @@ class _EmergencyNumberScreenState extends State<EmergencyNumberScreen> {
             children: [
               ...listEmergency.map((emergencyNumber) {
                 return EmergencyPhoneItem(emergencyNumber: emergencyNumber);
-              }).toList()
+              })
             ],
           ),
         ]
@@ -213,7 +213,7 @@ class _EmergencyNumberScreenState extends State<EmergencyNumberScreen> {
             children: [
               ...listEmergency.map((emergencyNumber) {
                 return EmergencyPhoneItem(emergencyNumber: emergencyNumber);
-              }).toList()
+              })
             ],
           ),
         ]
@@ -249,7 +249,7 @@ class _EmergencyNumberScreenState extends State<EmergencyNumberScreen> {
             children: [
               ...listEmergency.map((emergencyNumber) {
                 return EmergencyPhoneItem(emergencyNumber: emergencyNumber);
-              }).toList()
+              })
             ],
           ),
         ]
@@ -285,7 +285,7 @@ class _EmergencyNumberScreenState extends State<EmergencyNumberScreen> {
             children: [
               ...listEmergency.map((emergencyNumber) {
                 return EmergencyPhoneItem(emergencyNumber: emergencyNumber);
-              }).toList()
+              })
             ],
           ),
         ]
@@ -321,7 +321,7 @@ class _EmergencyNumberScreenState extends State<EmergencyNumberScreen> {
             children: [
               ...listEmergency.map((emergencyNumber) {
                 return EmergencyPhoneItem(emergencyNumber: emergencyNumber);
-              }).toList()
+              })
             ],
           ),
         ]
@@ -357,7 +357,7 @@ class _EmergencyNumberScreenState extends State<EmergencyNumberScreen> {
             children: [
               ...listEmergency.map((emergencyNumber) {
                 return EmergencyPhoneItem(emergencyNumber: emergencyNumber);
-              }).toList()
+              })
             ],
           ),
         ]
@@ -393,7 +393,7 @@ class _EmergencyNumberScreenState extends State<EmergencyNumberScreen> {
             children: [
               ...listEmergency.map((emergencyNumber) {
                 return EmergencyPhoneItem(emergencyNumber: emergencyNumber);
-              }).toList()
+              })
             ],
           ),
         ]

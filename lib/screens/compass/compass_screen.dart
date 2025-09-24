@@ -139,7 +139,7 @@ class _CompassScreenState extends State<CompassScreen> {
                                     double? direction = snapshot.data?.heading;
                                     // if direction is null, then device does not support this sensor
                                     // show error message
-                                    if (data == null || direction == null)
+                                    if (data == null || direction == null) {
                                       return Column(
                                         crossAxisAlignment: CrossAxisAlignment.center,
                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -153,6 +153,7 @@ class _CompassScreenState extends State<CompassScreen> {
                                               .svg(width: 50, height: 50)
                                         ],
                                       );
+                                    }
                                                               
                                     if (direction < 0) {
                                       direction = 360 + direction;
@@ -211,10 +212,11 @@ class _CompassScreenState extends State<CompassScreen> {
                                     );
                                   }
                                   MagnetometerEvent? data = snapshot.data;
-                                  if (data == null)
+                                  if (data == null) {
                                     return Container();
+                                  }
 
-                                  double? _magneticField = math.sqrt(
+                                  double? magneticField = math.sqrt(
                                     math.pow(data.x, 2) + math.pow(data.y, 2) + math.pow(data.z, 2),
                                   );
 
@@ -235,7 +237,7 @@ class _CompassScreenState extends State<CompassScreen> {
                                           children: [
                                             Assets.icons.icMagnet.svg(width: 24),
                                             AppText(
-                                              "${_magneticField.toStringAsFixed(0)} µT",
+                                              "${magneticField.toStringAsFixed(0)} µT",
                                               style: AppTextStyle.textSecondary16W500,
                                             ),
                                           ],
@@ -354,7 +356,7 @@ class _CompassScreenState extends State<CompassScreen> {
                                   spacing: 16,
                                   children: [
                                     AppText(
-                                      i18n.Tool.NoSensor + " Barometer",
+                                      "${i18n.Tool.NoSensor} Barometer",
                                       style: AppTextStyle.textSecondary14W600,
                                     ),
                                     Assets.icons.icSensor
@@ -380,7 +382,7 @@ class _CompassScreenState extends State<CompassScreen> {
                                 spacing: 16,
                                 children: [
                                   AppText(
-                                    i18n.Tool.NoSensor + "Barometer",
+                                    "${i18n.Tool.NoSensor}Barometer",
                                     style: AppTextStyle.textSecondary14W600,
                                   ),
                                   Assets.icons.icSensor
@@ -412,7 +414,7 @@ class _CompassScreenState extends State<CompassScreen> {
                                                   .textSecondary14W400,
                                             ),
                                             AppText(
-                                              barometer.pressure.toStringAsFixed(1) + "hPa",
+                                              "${barometer.pressure.toStringAsFixed(1)}hPa",
                                               style: AppTextStyle
                                                   .textSecondary14W600
                                                   .copyWith(fontSize: 18),
@@ -434,7 +436,7 @@ class _CompassScreenState extends State<CompassScreen> {
                                                   .textSecondary14W400,
                                             ),
                                             AppText(
-                                              barometer.pressure.pressureToAltitude().toStringAsFixed(1) + "m",
+                                              "${barometer.pressure.pressureToAltitude().toStringAsFixed(1)}m",
                                               style: AppTextStyle
                                                   .textSecondary14W600
                                                   .copyWith(fontSize: 18),

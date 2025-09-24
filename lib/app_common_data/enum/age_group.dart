@@ -1,5 +1,4 @@
 
-import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/generated/strings.g.dart';
 
 enum AgeGroup {

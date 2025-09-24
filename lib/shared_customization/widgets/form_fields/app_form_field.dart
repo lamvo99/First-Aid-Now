@@ -1,5 +1,4 @@
 // Flutter imports:
-import 'package:first_aid/shared_customization/data/basic_types.dart';
 import 'package:flutter/material.dart';
 
 import '../../export.dart';

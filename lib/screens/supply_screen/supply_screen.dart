@@ -5,8 +5,6 @@
 // Flutter imports:
 
 import 'package:bot_toast/bot_toast.dart';
-import 'package:first_aid/app_common_data/enum/supplies_catgory.dart';
-import 'package:first_aid/app_common_data/enum/supply_sort.dart';
 import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/model/supply/supply.dart';
@@ -94,13 +92,13 @@ class _SupplyScreenState extends State<SupplyScreen> {
                 },
               );
             },
+            backgroundColor: AppColors.PRIMARY_BASE,
             child: Icon(
               CupertinoIcons.add,
               color: Colors.white,
               weight: 20,
               size: 32,
             ),
-            backgroundColor: AppColors.PRIMARY_BASE,
           ),
           body: AppContainer(
             width: 1.sw,
@@ -132,7 +130,7 @@ class _SupplyScreenState extends State<SupplyScreen> {
                         Assets.icons.icSquareCheck.svg(width: 24, height: 24),
                         SizedBox(width: 6),
                         AppText(
-                          "${totalChecked}/${totalLength}",
+                          "$totalChecked/$totalLength",
                           style: AppTextStyle.textSecondary16W500,
                         ),
                         Spacer(),

@@ -1,5 +1,4 @@
 // Flutter imports:
-import 'package:first_aid/generated/strings.g.dart';
 import 'package:flutter/material.dart';
 
 // Package imports:

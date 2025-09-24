@@ -2,12 +2,8 @@ import 'package:first_aid/app_common_data/app_colors.dart';
 import 'package:first_aid/app_common_data/app_text_sytle.dart';
 import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/shared_customization/export.dart';
-import 'package:first_aid/shared_customization/helpers/dialogs/dialog_helper.dart';
 import 'package:flutter/material.dart';
 
-import 'app_container.dart';
-import 'custom_widgets/app_field.dart';
-import 'texts/app_text.dart';
 
 class AppSelectDate extends StatefulWidget {
   final String label;

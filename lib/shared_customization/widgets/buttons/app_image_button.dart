@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 // Project imports:
 import '../../export.dart';
 import '/app_common_data/app_colors.dart';
-import '/shared_customization/enums/image_type.dart';
 
 class AppImageButton extends StatelessWidget {
   final VoidCallback? onPressed;

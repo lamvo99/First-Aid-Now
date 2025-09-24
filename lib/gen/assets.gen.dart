@@ -303,6 +303,9 @@ class $AssetsIconsGen {
   SvgGenImage get icCallEmergency =>
       const SvgGenImage('assets/icons/ic_call_emergency.svg');
 
+  /// File path: assets/icons/ic_camera.svg
+  SvgGenImage get icCamera => const SvgGenImage('assets/icons/ic_camera.svg');
+
   /// File path: assets/icons/ic_candle.svg
   SvgGenImage get icCandle => const SvgGenImage('assets/icons/ic_candle.svg');
 
@@ -356,6 +359,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_edit.svg
   SvgGenImage get icEdit => const SvgGenImage('assets/icons/ic_edit.svg');
 
+  /// File path: assets/icons/ic_edit_avatar.svg
+  SvgGenImage get icEditAvatar =>
+      const SvgGenImage('assets/icons/ic_edit_avatar.svg');
+
   /// File path: assets/icons/ic_error_banner.svg
   SvgGenImage get icErrorBanner =>
       const SvgGenImage('assets/icons/ic_error_banner.svg');
@@ -365,6 +372,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/ic_expired.svg
   SvgGenImage get icExpired => const SvgGenImage('assets/icons/ic_expired.svg');
+
+  /// File path: assets/icons/ic_export.svg
+  SvgGenImage get icExport => const SvgGenImage('assets/icons/ic_export.svg');
 
   /// File path: assets/icons/ic_eye.svg
   SvgGenImage get icEye => const SvgGenImage('assets/icons/ic_eye.svg');
@@ -386,6 +396,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_flashlight.svg
   SvgGenImage get icFlashlight =>
       const SvgGenImage('assets/icons/ic_flashlight.svg');
+
+  /// File path: assets/icons/ic_gallery.svg
+  SvgGenImage get icGallery => const SvgGenImage('assets/icons/ic_gallery.svg');
 
   /// File path: assets/icons/ic_georgian.svg
   SvgGenImage get icGeorgian =>
@@ -411,6 +424,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_home_active.svg
   SvgGenImage get icHomeActive =>
       const SvgGenImage('assets/icons/ic_home_active.svg');
+
+  /// File path: assets/icons/ic_indicator.svg
+  SvgGenImage get icIndicator =>
+      const SvgGenImage('assets/icons/ic_indicator.svg');
 
   /// File path: assets/icons/ic_languages.svg
   SvgGenImage get icLanguages =>
@@ -470,6 +487,14 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_pentitence.svg
   SvgGenImage get icPentitence =>
       const SvgGenImage('assets/icons/ic_pentitence.svg');
+
+  /// File path: assets/icons/ic_placeholder_image.svg
+  SvgGenImage get icPlaceholderImage =>
+      const SvgGenImage('assets/icons/ic_placeholder_image.svg');
+
+  /// File path: assets/icons/ic_placeholder_image_add.svg
+  SvgGenImage get icPlaceholderImageAdd =>
+      const SvgGenImage('assets/icons/ic_placeholder_image_add.svg');
 
   /// File path: assets/icons/ic_play.svg
   SvgGenImage get icPlay => const SvgGenImage('assets/icons/ic_play.svg');
@@ -590,6 +615,7 @@ class $AssetsIconsGen {
     icBuddha,
     icCalendar,
     icCallEmergency,
+    icCamera,
     icCandle,
     icCardInfo,
     icCategory,
@@ -606,15 +632,18 @@ class $AssetsIconsGen {
     icDove,
     icDownload,
     icEdit,
+    icEditAvatar,
     icErrorBanner,
     icEvent,
     icExpired,
+    icExport,
     icEye,
     icEyeOff,
     icFile,
     icFireTruck,
     icFirstAidKit,
     icFlashlight,
+    icGallery,
     icGeorgian,
     icGift,
     icHandHeart,
@@ -622,6 +651,7 @@ class $AssetsIconsGen {
     icHeart,
     icHome,
     icHomeActive,
+    icIndicator,
     icLanguages,
     icLocation,
     icLotus,
@@ -639,6 +669,8 @@ class $AssetsIconsGen {
     icOilLamp,
     icPause,
     icPentitence,
+    icPlaceholderImage,
+    icPlaceholderImageAdd,
     icPlay,
     icPoliceCar,
     icQuiz,

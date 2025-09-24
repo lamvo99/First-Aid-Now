@@ -1,7 +1,6 @@
 import 'dart:async';
 
-import 'package:first_aid/model/personal_event/personal_event.dart';
-import 'package:first_aid/shared_customization/extensions/list_ext.dart';
+import 'package:first_aid/model/emergency_card/emergency_card.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sembast/sembast_io.dart';
@@ -38,35 +37,45 @@ class AppDatabase {
   /// PERSONAL EVENTS
   ///
 
-  static const String personalEventsStoreName = 'personal_events';
-  static const String personalEventsKey = 'personal_events_key';
+  static const String emergencyCardStoreName = 'emergency_card_store';
+  static const String emergencyCardKey = 'emergency_card_key';
   var store = StoreRef.main();
 
-  Future<void> putPersonalEvent(List<PersonalEvent> data) async {
+  Future<void> putEmergencyCard(EmergencyCard emergencyCard) async {
     try {
       if (_db == null) {
         throw Exception("Database not initialized");
       }
-      List<Map<String, dynamic>> value = data.map((e) => e.toJson()).toList();
-      await store.record(personalEventsKey).put(_db!, value);
-    } catch (e) {}
+      Map<String, dynamic> data = {
+        'owner': emergencyCard.owner?.toJson(),
+        'medicalInfo': emergencyCard.medicalInfo?.toJson(),
+        'emergencyContacts':
+            emergencyCard.emergencyContacts.map((e) => e.toJson()).toList(),
+        'instructions': emergencyCard.instructions,
+        'lastUpdated': emergencyCard.lastUpdated,
+        'visibility': emergencyCard.visibility?.toJson(),
+      };
+      print(data);
+      await store.record(emergencyCardKey).put(_db!, data);
+    } catch (e) {
+      print("####:$e");
+    }
   }
 
-  Future<List<PersonalEvent>> getPersonalEvents() async {
+  Future<EmergencyCard?> getEmergencyCard() async {
     try {
       if (_db == null) {
         throw Exception("Database not initialized");
       }
       var recordSnapshot = await store
-          .record(personalEventsKey)
-          .get(_db!) as List;
-      var result = List.from(recordSnapshot);
-      if (result.isNotEmptyOrNull) {
-        return result.map((e) => PersonalEvent.fromJson(e)).toList();
+          .record(emergencyCardKey)
+          .get(_db!) as Map<String, dynamic>?;
+      if (recordSnapshot != null) {
+        return EmergencyCard.fromJson(recordSnapshot);
       }
-      return [];
+      return null;
     } catch (e) {
-      return [];
+      return null;
     }
   }
 }

@@ -1,5 +1,6 @@
 // Dart imports:
 import 'dart:io';
+import 'dart:typed_data';
 import 'package:first_aid/shared_customization/extensions/string_ext.dart';
 import 'package:dio/dio.dart';
 
@@ -14,9 +15,54 @@ import 'package:file_saver/file_saver.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_file_downloader/flutter_file_downloader.dart';
 import 'package:gallery_saver_plus/gallery_saver.dart';
+import 'package:image_gallery_saver_plus/image_gallery_saver_plus.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class FileHelpers {
+  // Hàm lưu ảnh vào thư viện
+  Future<bool> saveImageToGallery(Uint8List imageBytes) async {
+    // Kiểm tra và yêu cầu quyền
+    try {
+      // Lưu ảnh vào thư viện bằng image_gallery_saver_plus
+      final result = await ImageGallerySaverPlus.saveImage(
+        imageBytes,
+        quality: 80, // Chất lượng ảnh (0-100)
+        name: "image_${DateTime.now().millisecondsSinceEpoch}", // Tên file
+      );
+
+      // Kiểm tra kết quả
+      if (result['isSuccess']) {
+        print('Ảnh đã được lưu vào thư viện: ${result['filePath']}');
+        return true;
+      } else {
+        print('Lưu ảnh thất bại: ${result['errorMessage']}');
+        return false;
+      }
+    } catch (e) {
+      print('Lỗi khi lưu ảnh: $e');
+      return false;
+    }
+  }
+
+  Future<String?> copyFileToAppDir(File sourceFile) async {
+    try {
+      // Lấy thư mục documents của app
+      final appDir = await getApplicationDocumentsDirectory();
+      final fileName = sourceFile.path.split('/').last; // lấy tên file
+      final newPath = '${appDir.path}/$fileName';
+
+      // Copy file
+      final newFile = await sourceFile.copy(newPath);
+      print("File đã copy vào: ${newFile.path}");
+
+      return newPath;
+    } catch (e) {
+      print("Lỗi khi copy file: $e");
+      return null;
+    }
+  }
+
   Future<bool> saveFileToLocal(String url, String fileName) async {
     try {
       final dio = Dio();

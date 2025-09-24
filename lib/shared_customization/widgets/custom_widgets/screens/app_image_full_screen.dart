@@ -16,10 +16,6 @@ import '../../../../app_common_data/export.dart';
 import '../../../../gen/assets.gen.dart';
 import '../../../../model/export.dart';
 import '../../../export.dart';
-import '../../app_layout.dart';
-import '../app_dismiss_keyboard.dart';
-import '../app_image.dart';
-import 'app_video_view_screen.dart';
 
 class AppImageFullScreenParams {
   final List<Files> files;

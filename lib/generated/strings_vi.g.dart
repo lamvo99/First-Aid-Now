@@ -51,6 +51,8 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 	late final TranslationsToolVi Tool = TranslationsToolVi.internal(_root);
 	late final TranslationsSuppliesVi Supplies = TranslationsSuppliesVi.internal(_root);
 	late final TranslationsEmergencyInfoVi EmergencyInfo = TranslationsEmergencyInfoVi.internal(_root);
+	late final TranslationsRelationShipVi RelationShip = TranslationsRelationShipVi.internal(_root);
+	late final TranslationsGenderTypeVi GenderType = TranslationsGenderTypeVi.internal(_root);
 	late final TranslationsMeritTypeVi MeritType = TranslationsMeritTypeVi.internal(_root);
 	late final TranslationsMeritJournalVi MeritJournal = TranslationsMeritJournalVi.internal(_root);
 	late final TranslationsEventTypeVi EventType = TranslationsEventTypeVi.internal(_root);
@@ -301,6 +303,7 @@ class TranslationsEmergencyInfoVi {
 	// Translations
 	String get Title => 'Thông tin khẩn cấp';
 	String get Edit => 'Chỉnh sửa thông tin';
+	String get Info => 'Thông tin cá nhân';
 	String get Name => 'Họ và tên';
 	String get NamePlace => 'Nhập họ và tên';
 	String get DateOfBirth => 'Ngày sinh';
@@ -311,20 +314,68 @@ class TranslationsEmergencyInfoVi {
 	String get BloodTypePlace => 'Chọn nhóm máu';
 	String get Allergy => 'Dị ứng';
 	String get AllergyPlace => 'Nhập dị ứng (nếu có)';
+	String get AllergyList => 'Danh sách dị ứng';
 	String get UnderlyingDiseases => 'Bệnh nền';
 	String get UnderlyingDiseasesPlace => 'Nhập tiền sử bệnh (nếu có)';
 	String get Medication => 'Thuốc đang dùng';
 	String get MedicationPlace => 'Nhập thuốc đang dùng (nếu có)';
+	String get MedicationList => 'Danh sách thuốc';
 	String get MedicalCondition => 'Tình trạng sức khoẻ';
 	String get MedicalConditionPlace => 'Nhập tình trạng sức khoẻ (nếu có)';
+	String get MedicalConditionList => 'Các loại bệnh';
 	String get OrganDonation => 'Hiến tạng';
+	String EmergencyContactNum({required Object num}) => 'Người liên hệ khẩn cấp số ${num}';
 	String get EmergencyContact => 'Người liên hệ khẩn cấp';
 	String get EmergencyContactPlace => 'Nhập người liên hệ khẩn cấp';
 	String get EmergencyPhone => 'Số điện thoại liên hệ khẩn cấp';
 	String get EmergencyPhonePlace => 'Nhập số điện thoại liên hệ khẩn cấp';
+	String get Relationship => 'Mối quan hệ';
 	String get SaveSuccess => 'Lưu thông tin khẩn cấp thành công';
 	String get NoteSpecific => 'Ghi chú đặc biệt';
 	String get Setting => 'Cài đặt hiển thị';
+	String get UpdateSuccess => 'Cập nhật thông tin thành công';
+	String get NoNote => 'Chưa có ghi chú đặc biệt nào';
+	String get LastUpdated => 'Cập nhật lần cuối';
+	String get Export => 'Xuất thông tin thành công';
+	String get ExportError => 'Xuất thông tin không thành công';
+}
+
+// Path: RelationShip
+class TranslationsRelationShipVi {
+	TranslationsRelationShipVi.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get Father => 'Cha';
+	String get Mother => 'Mẹ';
+	String get Son => 'Con trai';
+	String get Daughter => 'Con gái';
+	String get Brother => 'Anh/Em trai';
+	String get Sister => 'Chị/Em gái';
+	String get Grandfather => 'Ông';
+	String get Grandmother => 'Bà';
+	String get Uncle => 'Chú/Bác trai/Cậu';
+	String get Aunt => 'Cô/Dì/Bác gái';
+	String get Cousin => 'Anh/Chị/Em họ';
+	String get Nephew => 'Cháu trai (con của anh/chị/em ruột)';
+	String get Niece => 'Cháu gái (con của anh/chị/em ruột)';
+	String get Husband => 'Chồng';
+	String get Wife => 'Vợ';
+	String get Friend => 'Bạn bè';
+	String get Colleague => 'Đồng nghiệp';
+	String get Other => 'Khác';
+}
+
+// Path: GenderType
+class TranslationsGenderTypeVi {
+	TranslationsGenderTypeVi.internal(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get Male => 'Nam';
+	String get Female => 'Nữ';
 }
 
 // Path: MeritType
@@ -743,6 +794,8 @@ class TranslationsPermissionVi {
 	String get GalleryPermissionPurpose => 'Ứng dụng sử dụng ảnh trong thư viện';
 	String get CanNotAccessGalleryPermission => 'Không thể truy cập thư viện ảnh vì quyền truy cập bị từ chối';
 	String get PleaseAccessGalleryPermission => 'Vui lòng cho phép quyền truy cập vào thư viện ảnh';
+	String get PermissionRequired => 'Quyền cần thiết';
+	String get PleaseAcceptPermission => 'Vui lòng chấp nhận quyền';
 }
 
 // Path: LostConnection
@@ -995,6 +1048,7 @@ extension on Translations {
 			case 'Supplies.Detail': return 'Chi tiết vật tư';
 			case 'EmergencyInfo.Title': return 'Thông tin khẩn cấp';
 			case 'EmergencyInfo.Edit': return 'Chỉnh sửa thông tin';
+			case 'EmergencyInfo.Info': return 'Thông tin cá nhân';
 			case 'EmergencyInfo.Name': return 'Họ và tên';
 			case 'EmergencyInfo.NamePlace': return 'Nhập họ và tên';
 			case 'EmergencyInfo.DateOfBirth': return 'Ngày sinh';
@@ -1005,20 +1059,50 @@ extension on Translations {
 			case 'EmergencyInfo.BloodTypePlace': return 'Chọn nhóm máu';
 			case 'EmergencyInfo.Allergy': return 'Dị ứng';
 			case 'EmergencyInfo.AllergyPlace': return 'Nhập dị ứng (nếu có)';
+			case 'EmergencyInfo.AllergyList': return 'Danh sách dị ứng';
 			case 'EmergencyInfo.UnderlyingDiseases': return 'Bệnh nền';
 			case 'EmergencyInfo.UnderlyingDiseasesPlace': return 'Nhập tiền sử bệnh (nếu có)';
 			case 'EmergencyInfo.Medication': return 'Thuốc đang dùng';
 			case 'EmergencyInfo.MedicationPlace': return 'Nhập thuốc đang dùng (nếu có)';
+			case 'EmergencyInfo.MedicationList': return 'Danh sách thuốc';
 			case 'EmergencyInfo.MedicalCondition': return 'Tình trạng sức khoẻ';
 			case 'EmergencyInfo.MedicalConditionPlace': return 'Nhập tình trạng sức khoẻ (nếu có)';
+			case 'EmergencyInfo.MedicalConditionList': return 'Các loại bệnh';
 			case 'EmergencyInfo.OrganDonation': return 'Hiến tạng';
+			case 'EmergencyInfo.EmergencyContactNum': return ({required Object num}) => 'Người liên hệ khẩn cấp số ${num}';
 			case 'EmergencyInfo.EmergencyContact': return 'Người liên hệ khẩn cấp';
 			case 'EmergencyInfo.EmergencyContactPlace': return 'Nhập người liên hệ khẩn cấp';
 			case 'EmergencyInfo.EmergencyPhone': return 'Số điện thoại liên hệ khẩn cấp';
 			case 'EmergencyInfo.EmergencyPhonePlace': return 'Nhập số điện thoại liên hệ khẩn cấp';
+			case 'EmergencyInfo.Relationship': return 'Mối quan hệ';
 			case 'EmergencyInfo.SaveSuccess': return 'Lưu thông tin khẩn cấp thành công';
 			case 'EmergencyInfo.NoteSpecific': return 'Ghi chú đặc biệt';
 			case 'EmergencyInfo.Setting': return 'Cài đặt hiển thị';
+			case 'EmergencyInfo.UpdateSuccess': return 'Cập nhật thông tin thành công';
+			case 'EmergencyInfo.NoNote': return 'Chưa có ghi chú đặc biệt nào';
+			case 'EmergencyInfo.LastUpdated': return 'Cập nhật lần cuối';
+			case 'EmergencyInfo.Export': return 'Xuất thông tin thành công';
+			case 'EmergencyInfo.ExportError': return 'Xuất thông tin không thành công';
+			case 'RelationShip.Father': return 'Cha';
+			case 'RelationShip.Mother': return 'Mẹ';
+			case 'RelationShip.Son': return 'Con trai';
+			case 'RelationShip.Daughter': return 'Con gái';
+			case 'RelationShip.Brother': return 'Anh/Em trai';
+			case 'RelationShip.Sister': return 'Chị/Em gái';
+			case 'RelationShip.Grandfather': return 'Ông';
+			case 'RelationShip.Grandmother': return 'Bà';
+			case 'RelationShip.Uncle': return 'Chú/Bác trai/Cậu';
+			case 'RelationShip.Aunt': return 'Cô/Dì/Bác gái';
+			case 'RelationShip.Cousin': return 'Anh/Chị/Em họ';
+			case 'RelationShip.Nephew': return 'Cháu trai (con của anh/chị/em ruột)';
+			case 'RelationShip.Niece': return 'Cháu gái (con của anh/chị/em ruột)';
+			case 'RelationShip.Husband': return 'Chồng';
+			case 'RelationShip.Wife': return 'Vợ';
+			case 'RelationShip.Friend': return 'Bạn bè';
+			case 'RelationShip.Colleague': return 'Đồng nghiệp';
+			case 'RelationShip.Other': return 'Khác';
+			case 'GenderType.Male': return 'Nam';
+			case 'GenderType.Female': return 'Nữ';
 			case 'MeritType.Other': return 'Khác';
 			case 'MeritType.Liberation': return 'Phóng sinh';
 			case 'MeritType.Giving': return 'Bố thí';
@@ -1303,6 +1387,8 @@ extension on Translations {
 			case 'Permission.GalleryPermissionPurpose': return 'Ứng dụng sử dụng ảnh trong thư viện';
 			case 'Permission.CanNotAccessGalleryPermission': return 'Không thể truy cập thư viện ảnh vì quyền truy cập bị từ chối';
 			case 'Permission.PleaseAccessGalleryPermission': return 'Vui lòng cho phép quyền truy cập vào thư viện ảnh';
+			case 'Permission.PermissionRequired': return 'Quyền cần thiết';
+			case 'Permission.PleaseAcceptPermission': return 'Vui lòng chấp nhận quyền';
 			case 'LostConnection.LostConnection': return 'Mất kết nối';
 			case 'LostConnection.PleaseCheckConnection': return 'Vui lòng kiểm tra kết nối mạng của bạn hoặc thử lại.';
 			case 'LostConnection.Retry': return 'Kết nối lại';

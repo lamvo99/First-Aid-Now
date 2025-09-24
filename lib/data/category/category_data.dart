@@ -1,6 +1,5 @@
 
 
-import 'package:first_aid/app_common_data/common_data/global_variable.dart';
 import 'package:first_aid/app_common_data/export.dart';
 
 import '../../model/export.dart';

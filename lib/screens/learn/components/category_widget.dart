@@ -1,7 +1,6 @@
 import 'package:first_aid/data/category/category_data.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/screens/home/components/title_component_widget.dart';
-import 'package:first_aid/screens/home/cubit/home_cubit.dart';
 import 'package:first_aid/screens/learn/components/category_item.dart';
 import 'package:first_aid/screens/learn/cubit/learn_cubit.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +26,7 @@ class CategoryWidget extends StatelessWidget {
             children: [
               ...learnCategories.map((cate) {
                 return CategoryItem(category: cate);
-              }).toList()
+              })
             ],
           )
         ],

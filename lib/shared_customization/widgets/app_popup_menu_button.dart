@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 // Project imports:
 import '../../app_common_data/export.dart';
 import '../export.dart';
-import 'app_divider.dart';
-import 'texts/app_text.dart';
 
 class PopupMenuItemModel<T> {
   T value;

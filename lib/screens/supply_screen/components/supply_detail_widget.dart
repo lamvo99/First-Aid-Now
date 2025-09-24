@@ -1,12 +1,7 @@
-import 'package:first_aid/app_common_data/enum/supplies_catgory.dart';
-import 'package:first_aid/data/supply_data.dart';
 import 'package:first_aid/gen/assets.gen.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/model/export.dart';
-import 'package:first_aid/screens/supply_screen/cubit/supply_cubit.dart';
-import 'package:first_aid/shared_customization/widgets/app_select_date.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../app_common_data/export.dart';
 import '../../../shared_customization/export.dart';
@@ -16,10 +11,10 @@ class SupplyDetailWidget extends StatelessWidget {
   final SupplyModel supplyModel;
 
   const SupplyDetailWidget({
-    Key? key,
+    super.key,
     this.cancelFunc,
     required this.supplyModel,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +72,7 @@ class SupplyDetailWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           AppText(
-                            "${supplyModel.name ?? ""}",
+                            supplyModel.name ?? "",
                             style: AppTextStyle.textSecondary14W600
                                 .copyWith(fontSize: 16),
                           ),

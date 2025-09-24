@@ -39,8 +39,9 @@ class DateArrayConverter implements JsonConverter<DateTime, List<dynamic>> {
 
   @override
   DateTime fromJson(List<dynamic> json) {
-    if (json.length < 3)
+    if (json.length < 3) {
       throw FormatException('Date array must have 3 elements');
+    }
     return DateTime(json[0] as int, json[1] as int, json[2] as int);
   }
 

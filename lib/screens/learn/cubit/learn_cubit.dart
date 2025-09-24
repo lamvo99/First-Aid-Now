@@ -6,7 +6,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 // Project imports:
-import '../../../model/export.dart';
 import '../../../shared_customization/export.dart';
 import '/public_providers/config/bloc_base_state.dart';
 import '/public_providers/config/update_bloc_base_state.dart';

@@ -1,5 +1,4 @@
 import 'package:first_aid/model/export.dart';
-import 'package:uuid/uuid.dart';
 
 import '../app_common_data/enum/supplies_catgory.dart';
 

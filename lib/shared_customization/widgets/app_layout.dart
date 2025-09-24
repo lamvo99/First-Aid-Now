@@ -10,9 +10,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // Project imports:
 import '../../app_common_data/export.dart';
 import '../export.dart';
-import '/shared_customization/extensions/build_context_ext.dart';
-import 'buttons/app_button.dart';
-import 'texts/app_text_field.dart';
 
 class AppLayout extends StatefulWidget {
   final bool useSafeArea;

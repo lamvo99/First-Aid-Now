@@ -1,7 +1,5 @@
-import 'package:first_aid/app_common_data/enum/supplies_catgory.dart';
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/model/export.dart';
-import 'package:first_aid/shared_customization/widgets/app_select_date.dart';
 import 'package:flutter/material.dart';
 import '../../../app_common_data/export.dart';
 import '../../../shared_customization/export.dart';
@@ -13,12 +11,12 @@ class ChangeSupplyWidget extends StatefulWidget {
   final bool isEdit;
 
   const ChangeSupplyWidget({
-    Key? key,
+    super.key,
     required this.supplyModel,
     required this.onAcceptHandle,
     this.cancelFunc,
     this.isEdit = false,
-  }) : super(key: key);
+  });
 
   @override
   State<ChangeSupplyWidget> createState() => _ChangeSupplyWidgetState();

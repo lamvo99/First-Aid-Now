@@ -1,10 +1,8 @@
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:first_aid/generated/strings.g.dart';
 import 'package:first_aid/shared_customization/helpers/banner_helper.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
 import 'package:in_app_update/in_app_update.dart';
 
 class AppConfig {

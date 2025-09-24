@@ -5,7 +5,6 @@ import 'package:flutter/foundation.dart';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../app_common_data/export.dart';
 import '../../../public_providers/export.dart';
 import '../../../shared_customization/export.dart';
 
